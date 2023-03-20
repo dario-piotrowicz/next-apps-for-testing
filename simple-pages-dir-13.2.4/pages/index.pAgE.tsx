@@ -1,11 +1,32 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import { Component, ReactNode, StrictMode } from "react";
+import confetti from "https://cdn.skypack.dev/canvas-confetti";
+import { useEffect } from "react";
+
+const inter = Inter({ subsets: ["latin"] });
+
+class P extends Component {
+  componentWillMount(): void {
+    const test = {};
+    test.thisShouldMakeTsFail = 1;
+    console.log("component will mount!");
+  }
+
+  render(): ReactNode {
+    return <p>This is a Class Component!</p>;
+  }
+}
 
 export default function Home() {
+  useEffect(() => {
+    confetti();
+  });
+
   return (
     <>
       <Head>
@@ -15,6 +36,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <StrictMode>
+          <P />
+        </StrictMode>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
@@ -26,7 +50,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{' '}
+              By{" "}
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
@@ -119,5 +143,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  )
+  );
 }

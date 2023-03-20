@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "clearnpx": "npx clear-npx-cache",
-    "npx-next-on-pages": "npx @cloudflare/next-on-pages@0.0.0-4d3f879",
+    "npx-next-on-pages": "npx @cloudflare/next-on-pages",
     "nop": "npm run npx-next-on-pages",
     "nopw": "npm run npx-next-on-pages -- --watch",
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
