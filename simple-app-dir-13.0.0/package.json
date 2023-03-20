@@ -1,0 +1,31 @@
+{
+  "name": "simple-app-dir-13.0.0",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clearnpx": "npx clear-npx-cache",
+    "npx-next-on-pages": "npx next-on-pages",
+    "nop": "npm run npx-next-on-pages",
+    "nopw": "npm run npx-next-on-pages -- --watch",
+    "pages:dev": "npx wrangler pages dev .vercel/output/static"
+  },
+  "dependencies": {
+    "@types/node": "18.15.1",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.0.0",
+    "next": "13.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^0.4.2",
+    "vercel": "^28.17.0"
+  }
+}
