@@ -41,3 +41,7 @@ It contains next.config.js options:
 - compression set to `false` (don't compress rendered content and assets via gzip) (doesn't work on next-on-pages)
 
 - webpack config (to load mdx files)
+
+## app-playground
+
+[Next.js App Router Playground](https://github.com/vercel/app-playground) from Vercel, tweaked to run with next-on-pages [source](https://github.com/james-elicx/app-playground-edge).
