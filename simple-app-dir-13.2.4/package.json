@@ -11,6 +11,8 @@
     "npx-next-on-pages": "npx @cloudflare/next-on-pages",
     "nop": "npm run npx-next-on-pages",
     "nopw": "npm run npx-next-on-pages -- --watch",
+    "nopm": "npm run npx-next-on-pages -- --experimental-minify",
+    "nopmw": "npm run npx-next-on-pages -- --experimental-minify --watch",
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
@@ -23,5 +25,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "vercel": "^28.18.3",
+    "@cloudflare/next-on-pages": "../../next-on-pages"
   }
 }

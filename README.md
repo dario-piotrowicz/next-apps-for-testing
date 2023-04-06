@@ -6,6 +6,8 @@ very simple nextjs apps used to manually test next-on-pages, until we find a bet
 
 Simple app using Next.js 13.2.4 using the src directory, it also contains nested and dynamic routes
 
+It also contains a middleware so that if redirects requests to `/m` to `/routeA`
+
 ## simple-app-dir-13.0.0
 
 Simple app using Next.js 13.0.0 using the app directory, it also contains nested and dynamic routes

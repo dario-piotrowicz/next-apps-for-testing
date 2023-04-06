@@ -11,6 +11,8 @@
     "npx-next-on-pages": "npx @cloudflare/next-on-pages",
     "nop": "npm run npx-next-on-pages",
     "nopw": "npm run npx-next-on-pages -- --watch",
+    "nopm": "npm run npx-next-on-pages -- --experimental-minify",
+    "nopmw": "npm run npx-next-on-pages -- --experimental-minify --watch",
     "pages:dev": "npx wrangler pages dev .vercel/output/static"
   },
   "dependencies": {
@@ -25,9 +27,10 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^0.4.2",
+    "@cloudflare/next-on-pages": "../../next-on-pages",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@next/mdx": "^13.2.4"
+    "@next/mdx": "^13.2.4",
+    "vercel": "^28.18.3"
   }
 }
