@@ -13,8 +13,9 @@
     "clearnpx": "npx clear-npx-cache",
     "npx-next-on-pages": "npx @cloudflare/next-on-pages",
     "nop": "npm run npx-next-on-pages",
-    "nop-minify": "npm run npx-next-on-pages -- --experimental-minify",
     "nopw": "npm run npx-next-on-pages -- --watch",
+    "nopm": "npm run npx-next-on-pages -- --experimental-minify",
+    "nopmw": "npm run npx-next-on-pages -- --experimental-minify --watch",
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
   },
   "git": {
@@ -39,7 +40,7 @@
     "use-count-up": "3.0.1"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "0.5.0",
+    "@cloudflare/next-on-pages": "../../next-on-pages",
     "@tailwindcss/typography": "0.5.9",
     "@types/ms": "0.7.31",
     "@types/node": "18.11.17",
