@@ -22,7 +22,9 @@ Simple app using Next.js 13.2.4 using the app directory
 
 ## simple-pages-dir-13.2.4
 
-Simple app using Next.js 13.2.4 using the pages directory (no src nor app)
+Simple app using Next.js 13.2.4 using the pages directory (no src nor app), it also has a dynamic route
+
+> **Note** The app is static, it does not produce edge functions just static assets (since all pages are static and `api/hello.ts` is ignored since it doesn't end with one of the specified page extensions, to make the app not static add 'ts' to the `pageExtensions` field in `next.config.js`)
 
 It contains next.config.js options:
 
