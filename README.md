@@ -49,3 +49,12 @@ It contains next.config.js options:
 ## app-playground
 
 [Next.js App Router Playground](https://github.com/vercel/app-playground) from Vercel, tweaked to run with next-on-pages [source](https://github.com/james-elicx/app-playground-edge).
+
+## dynamic-static-app-dir-13.2.4
+
+Simple app using Next.js 13.2.4 using the app directory, it also contains static dynamic routes that get generated at build time.
+
+- Only the API route (`/api/hello`) specifies a runtime (`edge`)
+- Non-dynamic static page (`/non-dynamic/slug`).
+- Dynamic static page (`/dynamic/[slug]`).
+  - Generates with `foo`, `bar`, `baz` params at build time.
