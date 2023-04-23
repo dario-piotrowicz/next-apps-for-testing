@@ -1,3 +1,9 @@
+This app uses the app directory and contains the following:
+
+- edge-runtime SSR API route (`/api/hello`).
+- non-dynamic static (no runtime target) page (`/non-dynamic/slug`).
+- dynamic static (no runtime target) (`foo`/`bar`/`baz` at build time) page (`/dynamic/[slug]`).
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -8,3 +8,8 @@ export default function Page({ params }: Props): JSX.Element {
 		</div>
 	);
 }
+
+export const generateStaticParams = async (): Promise<{ slug: string }[]> => {
+	const slugs = ['foo', 'bar', 'baz'];
+	return slugs.map(slug => ({ slug }));
+};
