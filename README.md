@@ -58,3 +58,4 @@ Simple app using Next.js 13.2.4 using the app directory, it also contains static
 - Non-dynamic static page (`/non-dynamic/slug`).
 - Dynamic static page (`/dynamic/[slug]`).
   - Generates with `foo`, `bar`, `baz` params at build time.
+  - 404 for any other params.
