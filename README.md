@@ -20,6 +20,14 @@ Simple app using Next.js 13.2.4 using the app directory
 
 > Note: from this version on app dir apps require AsyncLocalStorage so this app relies on that addition (done in PR #115) and on the `nodejs_compat` flag
 
+## simple-app-dir-13.3.1
+
+Simple app using Next.js 13.3.1 using the app directory
+
+> Note: from this version on app dir apps require AsyncLocalStorage so this app relies on that addition (done in PR #115) and on the `nodejs_compat` flag
+
+> To switch things up it uses js and tailwind
+
 ## simple-pages-dir-13.2.4
 
 Simple app using Next.js 13.2.4 using the pages directory (no src nor app), it also has a dynamic route
