@@ -65,8 +65,26 @@ Simple app using Next.js 13.2.4 using the app directory, it also contains static
 Simple application showing a single page (under the `pages` directory, no `src` nor `app`) which imports a wasm module (built from rust) with a function that adds one to a give number and shows the result on the screen.
 
 Notes:
-  - it currently fails the build when running next-on-pages (v.0.10.0) since esbuild can't resolve the wasm import.
-  - `next dev` generated the following runtime error if you specify the edge runtime (haven't tried deploying it):
-    ```
-    TypeError: addOne is not a function
-    ```
+
+- it currently fails the build when running next-on-pages (v.0.10.0) since esbuild can't resolve the wasm import.
+- `next dev` generated the following runtime error if you specify the edge runtime (haven't tried deploying it):
+  ```
+  TypeError: addOne is not a function
+  ```
+
+## config-rewrites-redirects-headers-13.2.4
+
+Simple app using Next.js 13.2.4 using the app directory, it also contains rewrites, redirects and headers in the next.config.js file.
+
+- Rewrites
+  - `beforeFiles`
+    - `/some-page` -> `/somewhere-else` if search params `overrideMe` is present.
+  - `afterFiles`
+    - `/non-existent` -> `/contact`.
+  - `fallback`
+    - `/:path*` -> `https://my-old-site.com/:path*`.
+- Redirects
+  - `/about` -> `/home` (non-permanent).
+  - `/about-permanent` -> `/home` (permanent).
+- Headers
+  - `/` applies `x-hello: world` header.
