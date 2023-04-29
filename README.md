@@ -96,3 +96,16 @@ Simple app using Next.js 13.2.4 using the app directory, it also contains rewrit
   - `/about-permanent` -> `/home` (permanent).
 - Headers
   - `/` applies `x-hello: world` header.
+
+## middleware-13.2.4
+
+Simple app using Next.js 13.2.4 using the app directory, it also contains a middleware that adds headers, does redirects and rewrites, and throws errors.
+
+For a detailed list of what each route does, see the readme in the `middleware-13.2.4` directory.
+
+- `/api/hello` -> applies headers + cookie
+- `/api/hello?setHeader` -> applies multiple headers + cookie
+- `/api/hello?next` -> return NextResponse.next()
+- `/api/hello?redirect` -> performs a redirect
+- `/api/hello?rewrite` -> performs a rewrite
+- `/api/hello?error` -> throws an error
