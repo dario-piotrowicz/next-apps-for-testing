@@ -33,7 +33,7 @@ apps.forEach((app, idx) => {
     console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
     console.log('');
 
-    const { status } = spawnSync("npx", ["@cloudflare/next-on-pages"], {
+    const { status } = spawnSync("npm", ["run", script], {
       cwd: join('apps', app),
       stdio: "inherit",
     });
