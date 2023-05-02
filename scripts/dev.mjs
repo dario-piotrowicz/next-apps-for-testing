@@ -5,7 +5,7 @@ import { join } from 'path';
 
 const apps = readdirSync('apps');
 
-const devArgs = process.argv.slice(2)
+const devArgs = process.argv.slice(2);
 
 inquirer
   .prompt([

@@ -5,10 +5,13 @@ import inquirer from 'inquirer';
 
 const script = process.argv[2];
 
+
 if(!['nop', 'nopm'].includes(script)) {
-    console.error(`\x1b[31m Error: only "nop" and "nopm" scripts are allowed but got "${script}" instead \x1b[0m`);
-    process.exit(1);
+  console.error(`\x1b[31m Error: only "nop" and "nopm" scripts are allowed but got "${script}" instead \x1b[0m`);
+  process.exit(1);
 }
+
+const buildArgs = ['--'].concat(process.argv.slice(3));
 
 const allApps = readdirSync('apps');
 
@@ -34,7 +37,7 @@ inquirer
             // simple-wasm-pages-13.3.1 is currently broken since we don't yet support wasm imports
             "simple-wasm-pages-13.3.1",
         ];
-        
+
         const apps = allApps.filter(app => !appsFailingBuild.includes(app));
 
         apps.forEach((app, idx) => {
@@ -46,7 +49,7 @@ inquirer
             console.log(`\x1b[30m\x1b[46m ${appMessage} \x1b[0m`);
             console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
             console.log('');
-        
+
             const { status } = buildApp(app);
 
             if (status !== 0) {
@@ -62,14 +65,14 @@ inquirer
                 '\x1b[0m');
                 process.exit(status);
             }
-        
+
             console.log('\n\n\n\n\n\n\n\n\n\n');
         })
     }
   });
 
 function buildApp(app) {
-  return spawnSync("npm", ["run", script], {
+  return spawnSync("npm", ["run", script, '--', ...buildArgs], {
     cwd: join('apps', app),
     stdio: "inherit",
   });
