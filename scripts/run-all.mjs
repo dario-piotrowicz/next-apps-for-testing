@@ -28,9 +28,9 @@ apps.forEach((app, idx) => {
     const appMessage =      `================    ${app}   (app ${appNum} of ${numOfApps})    ================`;
     const decoration = new Array(appMessage.length).fill('=').join('');
     
-    console.log(`\x1b[36m\x1b[44m ${decoration} \x1b[0m`);
-    console.log(`\x1b[36m\x1b[44m ${appMessage} \x1b[0m`);
-    console.log(`\x1b[36m\x1b[44m ${decoration} \x1b[0m`);
+    console.log(`\x1b[44m ${decoration} \x1b[0m`);
+    console.log(`\x1b[44m ${appMessage} \x1b[0m`);
+    console.log(`\x1b[44m ${decoration} \x1b[0m`);
     
     const { status } = spawnSync("npx", ["@cloudflare/next-on-pages"], {
       cwd: join('apps', app),
