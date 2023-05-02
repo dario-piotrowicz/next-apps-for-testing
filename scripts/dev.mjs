@@ -5,6 +5,8 @@ import { join } from 'path';
 
 const apps = readdirSync('apps');
 
+const devArgs = process.argv.slice(2)
+
 inquirer
   .prompt([
     {
@@ -15,7 +17,7 @@ inquirer
     },
   ])
   .then(({ app }) => {
-    spawnSync("npm", ["run", "pages:dev"], {
+    spawnSync("npm", ["run", "pages:dev", "--", ...devArgs], {
         cwd: join('apps', app),
         stdio: "inherit",
       });
