@@ -37,12 +37,12 @@ const nextConfig = {
     return [
       {
         source: '/about',
-        destination: '/home',
+        destination: '/info',
         permanent: false,
       },
       {
         source: '/about-permanent',
-        destination: '/home',
+        destination: '/info',
         permanent: true,
       },
     ];

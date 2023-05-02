@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "./page.module.css";
 import Link from "next/link";
@@ -10,80 +9,30 @@ export const config = {
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const links: { href: string; description: string }[] = [
+    { href: "some-page", description: "Should go to /some-page" },
+    { href: "some-page?overrideMe", description: "Should rewrite to /somewhere-else" },
+    { href: "non-existent", description: "Should rewrite to /contact" },
+    { href: "external", description: "Should rewrite to https://my-old-site.com/external-non-existent" },
+    { href: "about", description: "Should redirect to /info (with status 307)" },
+    { href: "about-permanent", description: "Should redirect to /info (with status 308)" },
+  ];
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
+        <h2>The response for this page (/) should include a &quot;x-hello&quot; header with value &quot;world&quot;</h2>
       </div>
 
       <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <Link
-          href="non-existent"
-          className={styles.card}
-        >
-          <h2 className={inter.className}>
-            /non-existent <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Should redirect to /contact</p>
-        </Link>
-
-        <Link
-          href="/external-non-existent"
-          className={styles.card}
-        >
-          <h2 className={inter.className}>
-            /external-non-existent <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Should redirect to https://my-old-site.com/external-non-existent</p>
-        </Link>
+        {links.map(({ href, description }) => (
+          <Link key={href} href={href} className={styles.card}>
+            <h2 className={inter.className}>
+              {href} <span>-&gt;</span>
+            </h2>
+            <p className={inter.className}>{description}</p>
+          </Link>
+        ))}
       </div>
     </main>
   );
