@@ -6,7 +6,11 @@
     "apps/*"
   ],
   "scripts": {
+    "dev": "node scripts/dev.mjs",
     "nop-all": "node scripts/run-all.mjs nop",
     "nopm-all": "node scripts/run-all.mjs nopm"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.0"
   }
 }
