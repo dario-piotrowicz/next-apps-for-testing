@@ -1,5 +1,5 @@
 {
-  "name": "config-rewrites-redirects-headers-13.2.4",
+  "name": "simple-wasm-pages-13.3.1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,18 +16,21 @@
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
-    "@types/node": "18.15.3",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
+    "@types/node": "18.16.0",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
+    "next": "13.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.2"
+    "typescript": "5.0.4"
   },
   "devDependencies": {
-    "vercel": "^28.18.3",
-    "@cloudflare/next-on-pages": "../../next-on-pages"
+    "@cloudflare/next-on-pages": "../../../next-on-pages",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.2.4",
+    "vercel": "^28.18.3"
   }
 }
