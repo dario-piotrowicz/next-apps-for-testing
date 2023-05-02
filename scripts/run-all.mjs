@@ -27,11 +27,12 @@ apps.forEach((app, idx) => {
     const appNum = `${idx+1}`.padStart(2, '0')
     const appMessage =      `================    ${app}   (app ${appNum} of ${numOfApps})    ================`;
     const decoration = new Array(appMessage.length).fill('=').join('');
-    
-    console.log(`\x1b[44m ${decoration} \x1b[0m`);
-    console.log(`\x1b[44m ${appMessage} \x1b[0m`);
-    console.log(`\x1b[44m ${decoration} \x1b[0m`);
-    
+
+    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+    console.log(`\x1b[30m\x1b[46m ${appMessage} \x1b[0m`);
+    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+    console.log('');
+
     const { status } = spawnSync("npx", ["@cloudflare/next-on-pages"], {
       cwd: join('apps', app),
       stdio: "inherit",
