@@ -24,6 +24,8 @@ Simple app using Next.js 13.2.4 using the app directory
 
 Simple app using Next.js 13.3.1 using the app directory
 
+In the `/api/hello` route the app also uses env variables (both static from `next.config.js` and from wrangler)
+
 > Note: from this version on app dir apps require AsyncLocalStorage so this app relies on that addition (done in PR #115) and on the `nodejs_compat` flag
 
 > To switch things up it uses js and tailwind
