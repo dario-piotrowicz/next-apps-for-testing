@@ -111,3 +111,12 @@ For a detailed list of what each route does, see the readme in the `middleware-1
 - `/api/hello?redirect` -> performs a redirect
 - `/api/hello?rewrite` -> performs a rewrite
 - `/api/hello?error` -> throws an error
+
+## i18n-pages-dir-13.4.1
+
+Basic pages dir application using Next.js 13.4.1 with i18n enabled.
+
+- i18n for locales `en`, `fr`, `nl`, with `en` being the default locale.
+- static pages for each locale.
+- dynamic pages for each locale.
+- server side rendered pages for each locale.
