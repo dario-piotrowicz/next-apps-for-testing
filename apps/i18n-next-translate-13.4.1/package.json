@@ -1,0 +1,30 @@
+{
+  "name": "i18n-next-translate-13.4.1",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clearnpx": "npx clear-npx-cache",
+    "npx-next-on-pages": "node ../../../next-on-pages/bin/index.js",
+    "nop": "npm run npx-next-on-pages",
+    "nopw": "npm run npx-next-on-pages -- --watch",
+    "nopm": "npm run npx-next-on-pages -- --experimental-minify",
+    "nopmw": "npm run npx-next-on-pages -- --experimental-minify --watch",
+    "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
+  },
+  "dependencies": {
+    "next-translate": "2.0.5",
+    "next": "13.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "next-translate-plugin": "2.0.5",
+    "@cloudflare/next-on-pages": "../../../next-on-pages",
+    "vercel": "^28.18.3"
+  }
+}

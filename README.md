@@ -116,7 +116,20 @@ For a detailed list of what each route does, see the readme in the `middleware-1
 
 Basic pages dir application using Next.js 13.4.1 with i18n enabled.
 
-- i18n for locales `en`, `fr`, `nl`, with `en` being the default locale.
+- i18n for locales `en`, `fr`, `nl`, `es`, with `en` being the default locale.
+- redirect for `es` locale.
 - static pages for each locale.
 - dynamic pages for each locale.
 - server side rendered pages for each locale.
+
+## i18n-next-translate-13.4.1
+
+Basic pages dir application using Next.js 13.4.1 with next-translate.
+
+Example application from https://github.com/aralroca/next-translate/tree/master/examples/basic
+
+## i18n-next-intl-13.4.1
+
+Basic pages dir application using Next.js 13.4.1 with next-intl.
+
+Example application from https://github.com/amannn/next-intl/tree/main/examples/example

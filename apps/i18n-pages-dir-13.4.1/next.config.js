@@ -5,9 +5,15 @@
  **/
 const nextConfig = {
   i18n: {
-    locales: ['en', 'fr', 'nl'],
+    locales: ['en', 'fr', 'nl', 'es'],
     defaultLocale: 'en',
+    domains: [
+      {
+        domain: 'example.es',
+        defaultLocale: 'es',
+      },
+    ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

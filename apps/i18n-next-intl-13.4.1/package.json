@@ -1,0 +1,36 @@
+{
+  "name": "i18n-next-intl-13.4.1",
+  "version": "2.13.4",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clearnpx": "npx clear-npx-cache",
+    "npx-next-on-pages": "node ../../../next-on-pages/bin/index.js",
+    "nop": "npm run npx-next-on-pages",
+    "nopw": "npm run npx-next-on-pages -- --watch",
+    "nopm": "npm run npx-next-on-pages -- --experimental-minify",
+    "nopmw": "npm run npx-next-on-pages -- --experimental-minify --watch",
+    "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
+  },
+  "dependencies": {
+    "date-fns": "^2.16.1",
+    "next": "^13.4.1",
+    "next-intl": "^2.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.176",
+    "@types/node": "^17.0.23",
+    "@types/react": "^18.2.5",
+    "eslint": "^8.39.0",
+    "eslint-config-molindo": "^6.0.0",
+    "eslint-config-next": "^13.4.0",
+    "typescript": "^4.6.3",
+    "@cloudflare/next-on-pages": "../../../next-on-pages",
+    "vercel": "^28.18.3"
+  }
+}
