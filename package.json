@@ -12,5 +12,9 @@
   },
   "dependencies": {
     "inquirer": "^9.2.0"
+  },
+  "devDependencies": {
+    "wrangler": "2.20.0",
+    "@miniflare/tre": "3.0.0-next.13"
   }
 }

@@ -28,8 +28,6 @@ inquirer
     if ( app !== 'all' ) {
         buildApp(app);
     } else {
-        const numOfApps = `${apps.length}`.padStart(2, '0');
-
         // apps that don't currently build
         const appsFailingBuild = [
             // the build for dynamic-static-app-dir-13.2.4 is broken for some reason, I'll need to investigate and fix it
@@ -39,6 +37,8 @@ inquirer
         ];
 
         const apps = allApps.filter(app => !appsFailingBuild.includes(app));
+
+        const numOfApps = `${apps.length}`.padStart(2, '0');
 
         apps.forEach((app, idx) => {
             const appNum = `${idx+1}`.padStart(2, '0')
