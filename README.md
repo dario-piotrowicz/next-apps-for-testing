@@ -56,6 +56,12 @@ It contains next.config.js options:
 
 - webpack config (to load mdx files)
 
+## simple-pages-dir-13.4.2
+
+Simple app using Next.js 13.4.2 using the pages directory (no src nor app), just to change things it uses js and it doesn't use eslint.
+
+It's `/api/hello` route used `node:events`
+
 ## app-playground
 
 [Next.js App Router Playground](https://github.com/vercel/app-playground) from Vercel, tweaked to run with next-on-pages [source](https://github.com/james-elicx/app-playground-edge).
