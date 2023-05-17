@@ -1,11 +1,12 @@
 import Head from 'next/head'
+// @ts-ignore
+import helloWasm from '../hello.wasm?module'
 
 export const config = { runtime: 'experimental-edge' };
 
 export async function getServerSideProps() {
-  // @ts-ignore
-  const wasmModule = await import('../hello.wasm?module');
-  const addOne: (n: number) => number = wasmModule.add_one;
+  const helloWasmModule = await WebAssembly.instantiate(helloWasm as WebAssembly.Module);
+  const addOne = helloWasmModule.exports.add_one as (n: number) => number ;
 
   const n = 4;
   const result = addOne(4);
