@@ -443,17 +443,26 @@ importers:
       '@cloudflare/next-on-pages':
         specifier: ../../../next-on-pages
         version: link:../../../next-on-pages
+      '@types/node':
+        specifier: 18.15.3
+        version: 18.15.3
+      '@types/react':
+        specifier: 18.0.28
+        version: 18.0.28
+      '@types/react-dom':
+        specifier: 18.0.11
+        version: 18.0.11
       autoprefixer:
         specifier: 10.4.14
         version: 10.4.14(postcss@8.4.23)
       eslint:
-        specifier: 8.39.0
-        version: 8.39.0
+        specifier: 8.36.0
+        version: 8.36.0
       eslint-config-next:
-        specifier: '13.4'
-        version: 13.4.1(eslint@8.39.0)(typescript@4.9.5)
+        specifier: 13.4.1
+        version: 13.4.1(eslint@8.36.0)(typescript@5.0.2)
       next:
-        specifier: '13.4'
+        specifier: 13.4.1
         version: 13.4.1(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
       postcss:
         specifier: 8.4.23
@@ -467,9 +476,12 @@ importers:
       tailwindcss:
         specifier: 3.3.2
         version: 3.3.2
+      typescript:
+        specifier: 5.0.2
+        version: 5.0.2
       vercel:
         specifier: ^28.20.0
-        version: 28.20.0(@types/node@14.18.33)
+        version: 28.20.0(@types/node@18.15.3)
 
   apps/simple-pages-dir-13.2.4:
     dependencies:
@@ -5021,7 +5033,7 @@ packages:
   /@types/react-dom@18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 18.2.6
     dev: false
 
   /@types/react-dom@18.0.9:
@@ -5033,7 +5045,7 @@ packages:
   /@types/react-dom@18.2.0:
     resolution: {integrity: sha512-8yQrvS6sMpSwIovhPOwfyNf2Wz6v/B62LFSVYQ85+Rq3tLsBIG7rP5geMxaijTUxSkrO6RzN/IRuIAADYQsleA==}
     dependencies:
-      '@types/react': 18.2.0
+      '@types/react': 18.2.6
     dev: false
 
   /@types/react@18.0.26:
@@ -5527,7 +5539,6 @@ packages:
       - sugarss
       - supports-color
       - terser
-    dev: true
 
   /@vanilla-extract/integration@6.2.1(@types/node@18.16.0):
     resolution: {integrity: sha512-+xYJz07G7TFAMZGrOqArOsURG+xcYvqctujEkANjw2McCBvGEK505RxQqOuNiA9Mi9hgGdNp2JedSa94f3eoLg==}
@@ -5845,7 +5856,6 @@ packages:
       - terser
       - ts-node
       - utf-8-validate
-    dev: true
 
   /@vercel/remix-builder@1.8.5(@types/node@18.16.0):
     resolution: {integrity: sha512-nXUNsW6+gfHRqnZdXNm9Myx8G8nihbfRe/myAbvUHAXaym+9Bz+WHC3hXXr6YqAOVhjWvCfxAlA9eYqHbhlvKA==}
@@ -6182,7 +6192,6 @@ packages:
       - terser
       - ts-node
       - utf-8-validate
-    dev: true
 
   /@vercel/remix-run-dev@1.15.0(@types/node@18.16.0):
     resolution: {integrity: sha512-pQTM5WmOzrvhpPSHFDShwqX71YnLaTUxffhnly4MxVNKJ2WKV9zqx8bGQ/7cLfpEu9JfY2c+pVjYYb3wAMBt+Q==}
@@ -8453,31 +8462,6 @@ packages:
       eslint-plugin-react: 7.32.2(eslint@8.36.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.36.0)
       typescript: 5.0.2
-    transitivePeerDependencies:
-      - eslint-import-resolver-webpack
-      - supports-color
-    dev: false
-
-  /eslint-config-next@13.4.1(eslint@8.39.0)(typescript@4.9.5):
-    resolution: {integrity: sha512-ajuxjCkW1hvirr0EQZb3/B/bFH52Z7CT89uCtTcICFL9l30i5c8hN4p0LXvTjdOXNPV5fEDcxBgGHgXdzTj1/A==}
-    peerDependencies:
-      eslint: ^7.23.0 || ^8.0.0
-      typescript: '>=3.3.1'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@next/eslint-plugin-next': 13.4.1
-      '@rushstack/eslint-patch': 1.2.0
-      '@typescript-eslint/parser': 5.59.5(eslint@8.39.0)(typescript@4.9.5)
-      eslint: 8.39.0
-      eslint-import-resolver-node: 0.3.7
-      eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@5.59.5)(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.39.0)
-      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.59.5)(eslint-import-resolver-typescript@3.5.5)(eslint@8.39.0)
-      eslint-plugin-jsx-a11y: 6.7.1(eslint@8.39.0)
-      eslint-plugin-react: 7.32.2(eslint@8.39.0)
-      eslint-plugin-react-hooks: 4.6.0(eslint@8.39.0)
-      typescript: 4.9.5
     transitivePeerDependencies:
       - eslint-import-resolver-webpack
       - supports-color
@@ -14471,7 +14455,6 @@ packages:
       - terser
       - ts-node
       - utf-8-validate
-    dev: true
 
   /vercel@28.20.0(@types/node@18.16.0):
     resolution: {integrity: sha512-U+ZDKVVgxJyUJ26l/B7o53EeocP4PnbCt7D6Qyt/bI/eJ9BXpBtsWtMJf1CvgH3Iv/QRXFYlCvjHQJLs1BC7qw==}
@@ -14639,7 +14622,6 @@ packages:
       - sugarss
       - supports-color
       - terser
-    dev: true
 
   /vite-node@0.28.5(@types/node@18.16.0):
     resolution: {integrity: sha512-LmXb9saMGlrMZbXTvOveJKwMTBTNUH66c8rJnQ0ZPNX+myPEol64+szRzXtV5ORb0Hb/91yq+/D3oERoyAt6LA==}
@@ -14826,7 +14808,6 @@ packages:
       rollup: 3.21.6
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /vite@4.3.5(@types/node@18.16.0):
     resolution: {integrity: sha512-0gEnL9wiRFxgz40o/i/eTBwm+NEbpUeTWhzKrZDSdKm6nplj+z4lKz8ANDgildxHm47Vg8EUia0aicKbawUVVA==}
