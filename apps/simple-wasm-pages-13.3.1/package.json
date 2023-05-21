@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "clearnpx": "npx clear-npx-cache",
-    "npx-next-on-pages": "npx @cloudflare/next-on-pages",
+    "npx-next-on-pages": "npx @cloudflare/next-on-pages -m",
     "nop": "npm run npx-next-on-pages",
     "nopw": "npm run npx-next-on-pages -- --watch",
     "nopm": "npm run npx-next-on-pages -- --experimental-minify",
@@ -16,6 +16,7 @@
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
+    "@cloudflare/pages-plugin-vercel-og": "^0.1.0",
     "@types/node": "18.16.0",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
@@ -29,10 +30,10 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "../../../next-on-pages",
-    "wrangler": "^3.0.0",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.2.4",
-    "vercel": "^28.18.3"
+    "vercel": "^28.18.3",
+    "wrangler": "^3.0.0"
   }
 }
