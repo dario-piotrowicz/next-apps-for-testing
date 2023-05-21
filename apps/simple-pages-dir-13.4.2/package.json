@@ -21,7 +21,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "wrangler": "https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/4980988212/npm-package-wrangler-3205",
+    "wrangler": "^3.0.0",
     "@cloudflare/next-on-pages": "../../../next-on-pages"
   }
 }
