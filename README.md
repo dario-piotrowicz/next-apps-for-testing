@@ -139,3 +139,7 @@ Example application from https://github.com/aralroca/next-translate/tree/master/
 Basic pages dir application using Next.js 13.4.1 with next-intl.
 
 Example application from https://github.com/amannn/next-intl/tree/main/examples/example
+
+## kv-app-dir-13.4.4
+
+Simple app dir application which uses a Cloudflare KV via server actions

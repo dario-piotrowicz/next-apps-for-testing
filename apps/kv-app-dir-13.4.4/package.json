@@ -1,0 +1,35 @@
+{
+  "name": "kv-app-dir-13.4.4",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clearnpx": "npx clear-npx-cache",
+    "npx-next-on-pages": "npx @cloudflare/next-on-pages",
+    "nop": "npm run npx-next-on-pages",
+    "nopw": "npm run npx-next-on-pages -- --watch",
+    "nopm": "npm run npx-next-on-pages -- --experimental-minify",
+    "nopmw": "npm run npx-next-on-pages -- --experimental-minify --watch",
+    "pages:dev": "npx wrangler pages dev .vercel/output/static --kv=MY_KV --compatibility-flag=nodejs_compat"
+  },
+  "dependencies": {
+    "@types/node": "20.2.4",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.4",
+    "next": "13.4.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0",
+    "@cloudflare/workers-types": "4.20230518.0",
+    "@cloudflare/next-on-pages": "../../../next-on-pages",
+    "next-on-pages-vercel-cli": "29.3.0-next-on-pages-fix-3"
+  }
+}
