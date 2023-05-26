@@ -186,6 +186,31 @@ importers:
         specifier: ^28.20.0
         version: 28.20.0(@types/node@18.15.3)
 
+  apps/empty-getstaticpaths-pages-13.4.4:
+    dependencies:
+      next:
+        specifier: 13.4.4
+        version: 13.4.4(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@cloudflare/next-on-pages':
+        specifier: ^1.0.1
+        version: 1.0.1(next-on-pages-vercel-cli@29.3.0-next-on-pages-fix-3)(wrangler@3.0.0)
+      '@cloudflare/workers-types':
+        specifier: 4.20230518.0
+        version: 4.20230518.0
+      next-on-pages-vercel-cli:
+        specifier: 29.3.0-next-on-pages-fix-3
+        version: 29.3.0-next-on-pages-fix-3(@types/node@14.18.33)
+      wrangler:
+        specifier: ^3.0.0
+        version: 3.0.0
+
   apps/i18n-next-intl-13.4.1:
     dependencies:
       date-fns:
@@ -3045,6 +3070,27 @@ packages:
       mime: 3.0.0
     dev: true
 
+  /@cloudflare/next-on-pages@1.0.1(next-on-pages-vercel-cli@29.3.0-next-on-pages-fix-3)(wrangler@3.0.0):
+    resolution: {integrity: sha512-H5sYGl8WRqaAzDRmQ0YZV9d6DoJctWdoL9EJQSTC3EebbPLy0jMsT25bLlum/dkKk46REDHdow8XV9i+jddAlg==}
+    hasBin: true
+    peerDependencies:
+      next-on-pages-vercel-cli: 29.3.0-next-on-pages-fix-3
+      wrangler: ^3.0.0
+    dependencies:
+      acorn: 8.8.2
+      ast-types: 0.14.2
+      chalk: 5.2.0
+      chokidar: 3.5.3
+      cookie: 0.5.0
+      esbuild: 0.15.18
+      js-yaml: 4.1.0
+      next-on-pages-vercel-cli: 29.3.0-next-on-pages-fix-3(@types/node@14.18.33)
+      pcre-to-regexp: 1.1.0
+      wrangler: 3.0.0
+      zod: 3.21.4
+      zodcli: 0.0.4(zod@3.21.4)
+    dev: true
+
   /@cloudflare/pages-plugin-vercel-og@0.1.0:
     resolution: {integrity: sha512-FP4dr40ulPy5DJWfpgY7QvB5bkH5+Vif/jWlPwi1SOm/2GW2TIumgiYgkexYrcbR57JqjiCZKoOpodzcQ5ZSzg==}
     dependencies:
@@ -3796,7 +3842,7 @@ packages:
       nopt: 5.0.0
       npmlog: 5.0.1
       rimraf: 3.0.2
-      semver: 7.5.0
+      semver: 7.5.1
       tar: 6.1.14
     transitivePeerDependencies:
       - encoding
@@ -4821,7 +4867,7 @@ packages:
     resolution: {integrity: sha512-8KG5RD0GVP4ydEzRn/I4BNDuxDtqVbOdm8675T49OIG/NGhaK0pjPX7ZcDlvKYbA+ulvVK3ztfcF4uBdOxuJbQ==}
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.5.0
+      semver: 7.5.1
 
   /@npmcli/move-file@1.1.2:
     resolution: {integrity: sha512-1SUf/Cg2GzGDyaf15aR9St9TWlb+XvbZXWpDx8YKs7MLzMH/BCeopv+y9vzrzgkfykCGuWOlSu3mZhj2+FQcrg==}
@@ -4903,7 +4949,7 @@ packages:
       recast: 0.21.5
       remark-frontmatter: 4.0.1
       remark-mdx-frontmatter: 1.1.1
-      semver: 7.5.0
+      semver: 7.5.1
       sort-package-json: 1.57.0
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
@@ -5349,7 +5395,7 @@ packages:
       grapheme-splitter: 1.0.4
       ignore: 5.2.4
       natural-compare-lite: 1.4.0
-      semver: 7.5.0
+      semver: 7.5.1
       tsutils: 3.21.0(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -5540,7 +5586,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.0
+      semver: 7.5.1
       tsutils: 3.21.0(typescript@4.9.4)
       typescript: 4.9.4
     transitivePeerDependencies:
@@ -5561,7 +5607,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.0
+      semver: 7.5.1
       tsutils: 3.21.0(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -5581,7 +5627,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.0
+      semver: 7.5.1
       tsutils: 3.21.0(typescript@5.0.2)
       typescript: 5.0.2
     transitivePeerDependencies:
@@ -5602,7 +5648,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.0
+      semver: 7.5.1
       tsutils: 3.21.0(typescript@5.0.4)
       typescript: 5.0.4
     transitivePeerDependencies:
@@ -5623,7 +5669,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.59.5(typescript@4.9.5)
       eslint: 8.40.0
       eslint-scope: 5.1.1
-      semver: 7.5.0
+      semver: 7.5.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -6245,6 +6291,32 @@ packages:
       - utf-8-validate
     dev: true
 
+  /@vercel/remix-builder@1.8.8(@types/node@14.18.33):
+    resolution: {integrity: sha512-pXZ19gYVdrlLuxRlhrC5v1uYn53YdSLXSzbDlYgbWanE2dbMSRLIjhzq+GIow9TislkhZwJYEgaScho9dMQPDQ==}
+    dependencies:
+      '@remix-run/dev': /@vercel/remix-run-dev@1.16.0-patch.1(@types/node@14.18.33)
+      '@vercel/build-utils': 6.7.2
+      '@vercel/nft': 0.22.5
+      '@vercel/static-config': 2.0.17
+      path-to-regexp: 6.2.1
+      semver: 7.3.8
+      ts-morph: 12.0.0
+    transitivePeerDependencies:
+      - '@remix-run/serve'
+      - '@types/node'
+      - bluebird
+      - bufferutil
+      - encoding
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - ts-node
+      - utf-8-validate
+    dev: true
+
   /@vercel/remix-builder@1.8.8(@types/node@20.2.4):
     resolution: {integrity: sha512-pXZ19gYVdrlLuxRlhrC5v1uYn53YdSLXSzbDlYgbWanE2dbMSRLIjhzq+GIow9TislkhZwJYEgaScho9dMQPDQ==}
     dependencies:
@@ -6328,7 +6400,7 @@ packages:
       recast: 0.21.5
       remark-frontmatter: 4.0.1
       remark-mdx-frontmatter: 1.1.1
-      semver: 7.5.0
+      semver: 7.5.1
       sort-package-json: 1.57.0
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
@@ -6405,7 +6477,7 @@ packages:
       recast: 0.21.5
       remark-frontmatter: 4.0.1
       remark-mdx-frontmatter: 1.1.1
-      semver: 7.5.0
+      semver: 7.5.1
       sort-package-json: 1.57.0
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
@@ -6483,7 +6555,7 @@ packages:
       recast: 0.21.5
       remark-frontmatter: 4.0.1
       remark-mdx-frontmatter: 1.1.1
-      semver: 7.5.0
+      semver: 7.5.1
       sort-package-json: 1.57.0
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
@@ -6561,7 +6633,7 @@ packages:
       recast: 0.21.5
       remark-frontmatter: 4.0.1
       remark-mdx-frontmatter: 1.1.1
-      semver: 7.5.0
+      semver: 7.5.1
       sort-package-json: 1.57.0
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
@@ -6638,7 +6710,84 @@ packages:
       recast: 0.21.5
       remark-frontmatter: 4.0.1
       remark-mdx-frontmatter: 1.1.1
-      semver: 7.5.0
+      semver: 7.5.1
+      sort-package-json: 1.57.0
+      tar-fs: 2.1.1
+      tsconfig-paths: 4.2.0
+      ws: 7.5.9
+      xdm: 2.1.0
+    transitivePeerDependencies:
+      - '@types/node'
+      - bluebird
+      - bufferutil
+      - encoding
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - ts-node
+      - utf-8-validate
+    dev: true
+
+  /@vercel/remix-run-dev@1.16.0-patch.1(@types/node@14.18.33):
+    resolution: {integrity: sha512-W4ugL5WYJEye91kRsBnH2D3Ia+4nTN9IcCH72ykOr660svw9Xise0Zi5sPtV8FP2RncAVgs2wAyAblQzsm6IqQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    peerDependencies:
+      '@remix-run/serve': ^1.16.0
+    peerDependenciesMeta:
+      '@remix-run/serve':
+        optional: true
+    dependencies:
+      '@babel/core': 7.21.8
+      '@babel/generator': 7.21.5
+      '@babel/parser': 7.21.8
+      '@babel/plugin-syntax-jsx': 7.21.4(@babel/core@7.21.8)
+      '@babel/plugin-syntax-typescript': 7.21.4(@babel/core@7.21.8)
+      '@babel/preset-env': 7.21.5(@babel/core@7.21.8)
+      '@babel/preset-typescript': 7.21.5(@babel/core@7.21.8)
+      '@babel/traverse': 7.21.5
+      '@babel/types': 7.21.5
+      '@npmcli/package-json': 2.0.0
+      '@remix-run/server-runtime': 1.16.0
+      '@vanilla-extract/integration': 6.2.1(@types/node@14.18.33)
+      arg: 5.0.2
+      cacache: 15.3.0
+      chalk: 4.1.2
+      chokidar: 3.5.3
+      dotenv: 16.0.3
+      esbuild: 0.17.6
+      esbuild-plugin-polyfill-node: 0.2.0(esbuild@0.17.6)
+      execa: 5.1.1
+      exit-hook: 2.2.1
+      express: 4.18.2
+      fast-glob: 3.2.11
+      fs-extra: 10.1.0
+      get-port: 5.1.1
+      gunzip-maybe: 1.4.2
+      inquirer: 8.2.5
+      jsesc: 3.0.2
+      json5: 2.2.3
+      lodash: 4.17.21
+      lodash.debounce: 4.0.8
+      lru-cache: 7.18.3
+      minimatch: 9.0.1
+      node-fetch: 2.6.11
+      ora: 5.4.1
+      postcss: 8.4.23
+      postcss-discard-duplicates: 5.1.0(postcss@8.4.23)
+      postcss-load-config: 4.0.1(postcss@8.4.23)
+      postcss-modules: 6.0.0(postcss@8.4.23)
+      prettier: 2.7.1
+      pretty-ms: 7.0.1
+      proxy-agent: 5.0.0
+      react-refresh: 0.14.0
+      recast: 0.21.5
+      remark-frontmatter: 4.0.1
+      remark-mdx-frontmatter: 1.1.1
+      semver: 7.5.1
       sort-package-json: 1.57.0
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
@@ -6715,7 +6864,7 @@ packages:
       recast: 0.21.5
       remark-frontmatter: 4.0.1
       remark-mdx-frontmatter: 1.1.1
-      semver: 7.5.0
+      semver: 7.5.1
       sort-package-json: 1.57.0
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
@@ -7216,6 +7365,13 @@ packages:
     dependencies:
       tslib: 2.5.0
 
+  /ast-types@0.14.2:
+    resolution: {integrity: sha512-O0yuUDnZeQDL+ncNGlJ78BiO4jnYI3bvMsD5prT0/nsgijG/LpNBIr63gTjVTNsiGkgQhiyCShTgxt8oXOrklA==}
+    engines: {node: '>=4'}
+    dependencies:
+      tslib: 2.5.0
+    dev: true
+
   /ast-types@0.15.2:
     resolution: {integrity: sha512-c27loCv9QkZinsa5ProX751khO9DJl/AcB5c2KNtA6NRvHKS0PgLfcftz72KVq504vB0Gku5s2kUZzDBvQWvHg==}
     engines: {node: '>=4'}
@@ -7469,7 +7625,7 @@ packages:
   /builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /bundle-name@3.0.0:
@@ -7599,7 +7755,6 @@ packages:
   /chalk@5.2.0:
     resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
-    dev: false
 
   /character-entities-html4@2.1.0:
     resolution: {integrity: sha512-1v7fgQRj6hnSwFpq1Eu0ynr/CDEw0rXo2B61qXrLNdHZmPKgb7fqS1a2JwF0rISo9q77jDI8VMEHoApn8qDoZA==}
@@ -9763,7 +9918,7 @@ packages:
       read-pkg-up: 7.0.1
       regexp-tree: 0.1.27
       safe-regex: 2.1.1
-      semver: 7.5.0
+      semver: 7.5.1
       strip-indent: 3.0.0
     dev: true
 
@@ -12345,6 +12500,40 @@ packages:
       use-intl: 2.13.2(react@18.2.0)
     dev: false
 
+  /next-on-pages-vercel-cli@29.3.0-next-on-pages-fix-3(@types/node@14.18.33):
+    resolution: {integrity: sha512-u/Rct97/aq1c9o/r7YJdf7W6BMWpYxyb4yQ3bqPF5mnevnhSL9kpwyMwwWl2Z1QBgqB+5bz+hY/BpH1iRb8hhA==}
+    engines: {node: '>= 14'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@vercel/build-utils': 6.7.2
+      '@vercel/go': 2.5.1
+      '@vercel/hydrogen': 0.0.64
+      '@vercel/next': 3.8.2
+      '@vercel/node': 2.14.2
+      '@vercel/python': 3.1.60
+      '@vercel/redwood': 1.1.15
+      '@vercel/remix-builder': 1.8.8(@types/node@14.18.33)
+      '@vercel/ruby': 1.3.76
+      '@vercel/static-build': 1.3.30
+    transitivePeerDependencies:
+      - '@remix-run/serve'
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - bluebird
+      - bufferutil
+      - encoding
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - ts-node
+      - utf-8-validate
+    dev: true
+
   /next-on-pages-vercel-cli@29.3.0-next-on-pages-fix-3(@types/node@20.2.4):
     resolution: {integrity: sha512-u/Rct97/aq1c9o/r7YJdf7W6BMWpYxyb4yQ3bqPF5mnevnhSL9kpwyMwwWl2Z1QBgqB+5bz+hY/BpH1iRb8hhA==}
     engines: {node: '>= 14'}
@@ -12718,7 +12907,7 @@ packages:
     resolution: {integrity: sha512-zNy02qivjjRosswoYmPi8hIKJRr8MpQyeKT6qlcq/OnOgA3Rhoae+IYOqsM9V5+JnHWmxKnWOT2GxvtqdtOCXA==}
     engines: {node: '>=10'}
     dependencies:
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /node-addon-api@1.7.2:
@@ -12824,7 +13013,7 @@ packages:
     dependencies:
       execa: 6.1.0
       parse-package-name: 1.0.0
-      semver: 7.5.0
+      semver: 7.5.1
       validate-npm-package-name: 4.0.0
     dev: true
 
@@ -13151,6 +13340,10 @@ packages:
 
   /pathe@1.1.0:
     resolution: {integrity: sha512-ODbEPR0KKHqECXW1GoxdDb+AZvULmXjVPy4rt+pGo2+TnjJTIPJQSVS6N63n8T2Ip+syHhbn52OewKicV0373w==}
+
+  /pcre-to-regexp@1.1.0:
+    resolution: {integrity: sha512-KF9XxmUQJ2DIlMj3TqNqY1AWvyvTuIuq11CuuekxyaYMiFuMKGgQrePYMX5bXKLhLG3sDI4CsGAYHPaT7VV7+g==}
+    dev: true
 
   /peek-stream@1.1.3:
     resolution: {integrity: sha512-FhJ+YbOSBb9/rIl2ZeE/QHEsWn7PqNYt8ARAY3kIgNGOk13g9FGyIY6JIl/xB/3TFRVoTv5as0l11weORrTekA==}
@@ -14039,8 +14232,8 @@ packages:
     dependencies:
       lru-cache: 6.0.0
 
-  /semver@7.5.0:
-    resolution: {integrity: sha512-+XC0AD/R7Q2mPSRuy2Id0+CGTZ98+8f+KvwirxOKIEyid+XSx6HbC63p+O4IndTHuX5Z+JxQ0TghCkO5Cg/2HA==}
+  /semver@7.5.1:
+    resolution: {integrity: sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -16268,6 +16461,15 @@ packages:
 
   /zod@3.21.4:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
+
+  /zodcli@0.0.4(zod@3.21.4):
+    resolution: {integrity: sha512-+WdBcf7Z19ueKI/w9SbxRXGyPnn5Fg/hc2nvOL3YKwcnhL2dvp58MvZwScvJS/Zqt4ePwSOLajboFG6su8BM8w==}
+    peerDependencies:
+      zod: ^3.21.4
+    dependencies:
+      typescript: 4.9.5
+      zod: 3.21.4
+    dev: true
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}

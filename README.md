@@ -143,3 +143,8 @@ Example application from https://github.com/amannn/next-intl/tree/main/examples/
 ## kv-app-dir-13.4.4
 
 Simple app dir application which uses a Cloudflare KV via server actions
+
+## empty-getstaticpaths-pages-13.4.4
+
+A simple pages dir application which has a dynamic path which uses getStaticPaths to generate
+an empty array of paths (reproduction of issue: https://github.com/cloudflare/next-on-pages/issues/274)
