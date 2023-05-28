@@ -117,6 +117,7 @@ For a detailed list of what each route does, see the readme in the `middleware-1
 - `/api/hello?redirect` -> performs a redirect
 - `/api/hello?rewrite` -> performs a rewrite
 - `/api/hello?error` -> throws an error
+- `/api/hello?returns` -> returns a response with `return new NextResponse`
 
 ## i18n-pages-dir-13.4.1
 

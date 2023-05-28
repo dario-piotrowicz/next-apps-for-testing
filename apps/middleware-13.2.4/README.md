@@ -44,6 +44,9 @@
 - /throw
   - status 200
   - nextjs catches error and shows message
+- /api/hello?returns
+  - status 401
+  - returns custom html page
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

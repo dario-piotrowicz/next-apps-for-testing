@@ -30,6 +30,24 @@ export function middleware(request: NextRequest) {
     throw new Error('Error from middleware');
   }
 
+  if (request.nextUrl.searchParams.has('returns')) {
+    const content = `
+      <head>
+          <meta charset="UTF-8" />
+      </head>
+      <body>
+          <h1>Hello from middleware</h1>
+      </body>
+    `;
+  
+    return new NextResponse(content, {
+      status: 401,
+      headers: {
+        "content-type": "text/html",
+      },
+    });
+  }
+
   response.cookies.set('x-hello-from-middleware2', 'hello');
   response.headers.set('x-hello-from-middleware2', 'hello');
 
