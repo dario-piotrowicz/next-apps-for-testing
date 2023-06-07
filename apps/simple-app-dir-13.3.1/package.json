@@ -13,7 +13,8 @@
     "nopw": "npm run npx-next-on-pages -- --watch",
     "nopm": "npm run npx-next-on-pages -- --experimental-minify",
     "nopmw": "npm run npx-next-on-pages -- --experimental-minify --watch",
-    "pages:dev": "npx wrangler pages dev .vercel/output/static --binding MY_VAR=MY_VAR_VALUE --compatibility-flag=nodejs_compat"
+    "pages:dev": "npx wrangler pages dev .vercel/output/static --binding MY_VAR=MY_VAR_VALUE --compatibility-flag=nodejs_compat",
+    "pages:deploy": "npx wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
@@ -25,6 +26,7 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
     "@cloudflare/next-on-pages": "../../../next-on-pages",
-    "vercel": "^28.20.0"
+    "vercel": "^28.20.0",
+    "wrangler": "^3.1.0"
   }
 }
