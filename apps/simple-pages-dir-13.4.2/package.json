@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "clearnpx": "npx clear-npx-cache",
-    "npx-next-on-pages": "npx @cloudflare/next-on-pages",
+    "npx-next-on-pages": "NODE_ENV='test' npx @cloudflare/next-on-pages",
     "nop": "npm run npx-next-on-pages",
     "nopw": "npm run npx-next-on-pages -- --watch",
     "nopm": "npm run npx-next-on-pages -- --experimental-minify",

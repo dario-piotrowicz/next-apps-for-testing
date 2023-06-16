@@ -64,6 +64,8 @@ Simple app using Next.js 13.4.2 using the pages directory (no src nor app), just
 
 It's `/api/hello` route used `node:events`
 
+It also has a `/api/env` route that shows the used `NODE_ENV`
+
 ## app-playground
 
 [Next.js App Router Playground](https://github.com/vercel/app-playground) from Vercel, tweaked to run with next-on-pages [source](https://github.com/james-elicx/app-playground-edge).
