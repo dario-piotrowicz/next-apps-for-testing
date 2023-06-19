@@ -32,6 +32,18 @@ It also has a `/api/cookies` route that simply lists the Request's cookies
 
 > To switch things up it uses js and tailwind
 
+## simple-app-dir-13.4.2
+
+Simple app using Next.js 13.4.2 using the app directory
+
+It has a top level error page.
+
+It also tests different next.config.js props:
+ - `images` (with a `loaderFile`)
+ - `mdxRs` (see the `error-message.mdx` file)
+ - `trailingSlash`
+ - `typedRoutes`
+
 ## simple-pages-dir-13.2.4
 
 Simple app using Next.js 13.2.4 using the pages directory (no src nor app), it also has a dynamic route
