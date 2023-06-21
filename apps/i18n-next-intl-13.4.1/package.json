@@ -30,7 +30,7 @@
     "eslint-config-molindo": "^6.0.0",
     "eslint-config-next": "^13.4.0",
     "typescript": "^4.6.3",
-    "@cloudflare/next-on-pages": "../../../next-on-pages",
+    "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages",
     "vercel": "^28.18.3"
   }
 }

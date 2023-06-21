@@ -62,8 +62,8 @@ importers:
         version: 3.0.1(react@18.2.0)
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       '@tailwindcss/typography':
         specifier: 0.5.9
         version: 0.5.9(tailwindcss@3.2.4)
@@ -147,8 +147,8 @@ importers:
         version: 5.0.2
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       vercel:
         specifier: ^28.18.3
         version: 28.20.0(@types/node@18.15.3)
@@ -184,8 +184,8 @@ importers:
         version: 5.0.2
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       vercel:
         specifier: ^28.20.0
         version: 28.20.0(@types/node@18.15.3)
@@ -234,8 +234,8 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       '@types/lodash':
         specifier: ^4.14.176
         version: 4.14.194
@@ -277,8 +277,8 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       next-translate-plugin:
         specifier: 2.0.5
         version: 2.0.5(next-translate@2.0.5)
@@ -317,8 +317,8 @@ importers:
         version: 5.0.2
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       vercel:
         specifier: ^28.18.3
         version: 28.20.0(@types/node@18.15.3)
@@ -354,8 +354,8 @@ importers:
         version: 5.0.4
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       '@cloudflare/workers-types':
         specifier: 4.20230518.0
         version: 4.20230518.0
@@ -397,8 +397,8 @@ importers:
         version: 5.0.2
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       vercel:
         specifier: ^28.18.3
         version: 28.20.0(@types/node@18.15.3)
@@ -434,8 +434,8 @@ importers:
         version: 4.9.5
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       vercel:
         specifier: ^28.18.3
         version: 28.20.0(@types/node@18.15.1)
@@ -471,8 +471,8 @@ importers:
         version: 5.0.2
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       vercel:
         specifier: ^28.18.3
         version: 28.20.0(@types/node@18.15.3)
@@ -480,8 +480,8 @@ importers:
   apps/simple-app-dir-13.3.1:
     dependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       autoprefixer:
         specifier: 10.4.14
         version: 10.4.14(postcss@8.4.23)
@@ -516,8 +516,8 @@ importers:
   apps/simple-app-dir-13.4.1-server-actions:
     dependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       '@types/node':
         specifier: 18.15.3
         version: 18.15.3
@@ -650,8 +650,8 @@ importers:
         version: 5.0.2
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       '@mdx-js/loader':
         specifier: ^2.3.0
         version: 2.3.0(webpack@5.82.1)
@@ -678,8 +678,8 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       wrangler:
         specifier: ^3.0.0
         version: 3.0.0
@@ -715,8 +715,8 @@ importers:
         version: 5.0.2
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       vercel:
         specifier: ^28.18.3
         version: 28.20.0(@types/node@18.15.3)
@@ -758,8 +758,8 @@ importers:
         version: 5.0.4
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ../../../next-on-pages
-        version: link:../../../next-on-pages
+        specifier: ../../../next-on-pages/packages/next-on-pages
+        version: link:../../../next-on-pages/packages/next-on-pages
       '@mdx-js/loader':
         specifier: ^2.3.0
         version: 2.3.0(webpack@5.82.1)

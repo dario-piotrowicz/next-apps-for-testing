@@ -22,6 +22,6 @@
   },
   "devDependencies": {
     "wrangler": "^3.0.0",
-    "@cloudflare/next-on-pages": "../../../next-on-pages"
+    "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages"
   }
 }

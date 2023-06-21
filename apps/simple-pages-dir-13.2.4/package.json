@@ -27,7 +27,7 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "../../../next-on-pages",
+    "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.2.4",

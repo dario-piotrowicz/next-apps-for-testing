@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "vercel": "^28.18.3",
-    "@cloudflare/next-on-pages": "../../../next-on-pages"
+    "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages"
   }
 }

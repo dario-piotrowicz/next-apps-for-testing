@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "next-translate-plugin": "2.0.5",
-    "@cloudflare/next-on-pages": "../../../next-on-pages",
+    "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages",
     "vercel": "^28.18.3"
   }
 }

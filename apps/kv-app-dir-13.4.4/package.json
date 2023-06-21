@@ -29,7 +29,7 @@
   "devDependencies": {
     "wrangler": "^3.0.0",
     "@cloudflare/workers-types": "4.20230518.0",
-    "@cloudflare/next-on-pages": "../../../next-on-pages",
+    "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages",
     "next-on-pages-vercel-cli": "29.3.0-next-on-pages-fix-3"
   }
 }

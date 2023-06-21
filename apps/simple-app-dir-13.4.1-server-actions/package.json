@@ -16,7 +16,7 @@
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
-    "@cloudflare/next-on-pages": "../../../next-on-pages",
+    "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages",
     "autoprefixer": "10.4.14",
     "eslint": "8.36.0",
     "eslint-config-next": "13.4.1",
