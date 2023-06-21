@@ -491,6 +491,9 @@ importers:
       eslint-config-next:
         specifier: 13.3.1
         version: 13.3.1(eslint@8.39.0)(typescript@4.9.5)
+      eslint-plugin-next-on-pages:
+        specifier: ../../../next-on-pages/packages/eslint-plugin-next-on-pages
+        version: link:../../../next-on-pages/packages/eslint-plugin-next-on-pages
       next:
         specifier: 13.3.1
         version: 13.3.1(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)

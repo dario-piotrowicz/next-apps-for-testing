@@ -32,6 +32,8 @@ It also has a `/api/cookies` route that simply lists the Request's cookies
 
 > To switch things up it uses js and tailwind
 
+> This app also uses `eslint-plugin-next-on-pages`
+
 ## simple-app-dir-13.4.2
 
 Simple app using Next.js 13.4.2 using the app directory
