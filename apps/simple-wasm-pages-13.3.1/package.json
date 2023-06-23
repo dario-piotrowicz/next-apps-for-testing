@@ -13,10 +13,10 @@
     "nopw": "npm run npx-next-on-pages -- --watch",
     "nopm": "npm run npx-next-on-pages -- --experimental-minify",
     "nopmw": "npm run npx-next-on-pages -- --experimental-minify --watch",
-    "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
+    "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
+    "pages:deploy": "npx wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
-    "@cloudflare/pages-plugin-vercel-og": "^0.1.0",
     "@types/node": "18.16.0",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
