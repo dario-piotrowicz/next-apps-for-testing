@@ -47,6 +47,7 @@
 - /api/hello?returns
   - status 401
   - returns custom html page
+- /redirect-me?params=should-exist -> /redirect-to?params=should-exist
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
