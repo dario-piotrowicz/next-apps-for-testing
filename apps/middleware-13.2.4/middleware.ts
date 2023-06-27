@@ -39,11 +39,20 @@ export function middleware(request: NextRequest) {
           <h1>Hello from middleware</h1>
       </body>
     `;
-  
+
     return new NextResponse(content, {
       status: 401,
       headers: {
-        "content-type": "text/html",
+        'content-type': 'text/html',
+      },
+    });
+  }
+
+  if (request.nextUrl.searchParams.has('returns200')) {
+    return new NextResponse('Hello, world', {
+      status: 200,
+      headers: {
+        'content-type': 'text/html',
       },
     });
   }
