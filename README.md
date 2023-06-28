@@ -46,6 +46,8 @@ It also tests different next.config.js props:
  - `trailingSlash`
  - `typedRoutes`
 
+Additionally it uses the `eslint-plugin-next-on-pages` package
+
 ## simple-pages-dir-13.2.4
 
 Simple app using Next.js 13.2.4 using the pages directory (no src nor app), it also has a dynamic route
