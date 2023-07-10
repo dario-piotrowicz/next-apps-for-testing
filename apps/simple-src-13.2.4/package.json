@@ -13,7 +13,8 @@
     "nopw": "npm run npx-next-on-pages -- --watch",
     "nopm": "npm run npx-next-on-pages -- --experimental-minify",
     "nopmw": "npm run npx-next-on-pages -- --experimental-minify --watch",
-    "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
+    "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
+    "pages:dep": "npx wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "@types/node": "18.15.3",
