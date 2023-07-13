@@ -48,6 +48,8 @@ It also tests different next.config.js props:
 
 Additionally it uses the `eslint-plugin-next-on-pages` package
 
+It also has an api route (`/api/inline-assets`) that showcases how different inline asset fetches should behave
+
 ## simple-pages-dir-13.2.4
 
 Simple app using Next.js 13.2.4 using the pages directory (no src nor app), it also has a dynamic route
