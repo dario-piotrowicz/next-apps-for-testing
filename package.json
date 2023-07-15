@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "very simple nextjs apps used to manually test next-on-pages, until we find a better solution",
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "internal-packages/*"
   ],
   "scripts": {
     "dev": "node scripts/dev.mjs",
