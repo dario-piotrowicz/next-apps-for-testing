@@ -1,17 +1,17 @@
 import { ImageResponse } from 'next/server';
 // App router includes @vercel/og.
 // No need to install it.
- 
+
 export const runtime = 'edge';
- 
+
 // Make sure the font exists in the specified path:
-const font = fetch(new URL('../../assets/TYPEWR_ _.ttf', import.meta.url)).then(
+const font = fetch(new URL('../../assets/TYPEWR__.ttf', import.meta.url)).then(
   (res) => res.arrayBuffer(),
 );
- 
+
 export default async function handler() {
   const fontData = await font;
- 
+
   return new ImageResponse(
     (
       <div

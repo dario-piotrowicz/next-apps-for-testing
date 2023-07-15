@@ -77,8 +77,6 @@ function runMainBuildLogic(app, deploy, projectName) {
       // `getRequestExecutionContext` from `@cloudflare/next-on-pages/utils` that is
       // not merged and we'll probably won't go forward with it
       "simple-app-dir-13.4.1-server-actions",
-
-      "simple-wasm-pages-13.3.1",
     ];
 
     const apps = allApps.filter(app => !appsFailingBuild.includes(app));
