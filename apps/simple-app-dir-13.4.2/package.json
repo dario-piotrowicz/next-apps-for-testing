@@ -37,7 +37,6 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages",
     "eslint-plugin-next-on-pages": "../../../next-on-pages/packages/eslint-plugin-next-on-pages",
-    "vercel": "^30.2.2",
-    "wrangler": "^3.0.0"
+    "vercel": "^30.2.2"
   }
 }

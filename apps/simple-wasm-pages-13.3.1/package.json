@@ -33,7 +33,6 @@
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.2.4",
-    "vercel": "^28.18.3",
-    "wrangler": "^3.0.0"
+    "vercel": "^28.18.3"
   }
 }
