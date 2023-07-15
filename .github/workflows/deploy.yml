@@ -1,0 +1,47 @@
+name: Deploy applications
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: 'App to dispatch'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+        - all
+        - app-playground-edge
+        - config-rewrites-redirects-headers-13.2.4
+        - dynamic-static-app-dir-13.2.4
+        - empty-getstaticpaths-pages-13.4.4
+        - i18n-next-intl-13.4.1
+        - i18n-next-translate-13.4.1
+        - i18n-pages-dir-13.4.1
+        - kv-app-dir-13.4.4
+        - middleware-13.2.4
+        - simple-app-dir-13.0.0
+        - simple-app-dir-13.2.4
+        - simple-app-dir-13.3.1
+        - simple-app-dir-13.4.1-server-actions
+        - simple-app-dir-13.4.2
+        - simple-app-dir-13.4.2-images
+        - simple-pages-dir-13.2.4
+        - simple-pages-dir-13.4.2
+        - simple-src-13.2.4
+        - simple-wasm-pages-13.3.1
+      next-on-pages-version:
+        description: 'Version of @cloudflare/next-on-pages to use'
+        required: true
+        default: 'latest'
+        type: string
+
+
+jobs:
+  log-the-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "App: $APP"
+          echo "next-on-pages version: $NEXT_ON_PAGES_VERSION"
+        env:
+          APP: ${{ inputs.app }}
+          NEXT_ON_PAGES_VERSION: ${{ inputs.next-on-pages-version }}
