@@ -78,8 +78,7 @@ function runMainBuildLogic(app, deploy, projectName) {
       // not merged and we'll probably won't go forward with it
       "simple-app-dir-13.4.1-server-actions",
 
-      // i18n-next-translate-13.4.1 breaks the gh workflow
-      "i18n-next-translate-13.4.1",
+      "simple-wasm-pages-13.3.1",
     ];
 
     const apps = allApps.filter(app => !appsFailingBuild.includes(app));
