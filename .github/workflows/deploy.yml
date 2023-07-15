@@ -57,7 +57,8 @@ jobs:
       - name: Deploy apps
         id: run-deploy-apps
         working-directory: internal-packages/github-deploy-apps
-        run: GH_ACTION=true npm run deploy-apps
+        run: GH_ACTION=true pnpm deploy-apps
         env:
           APP: ${{ inputs.app }}
-          NEXT_ON_PAGES_VERSION: ${{ inputs.next-on-pages-version }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PROJECT_NAME: ${{ vars.PROJECT_NAME }}

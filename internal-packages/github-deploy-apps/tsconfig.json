@@ -3,7 +3,7 @@
 	"extends": "@tsconfig/strictest/tsconfig.json",
 	"compilerOptions": {
 		"target": "ES2022",
-		"module": "CommonJS",
+		"module": "ESNext",
 		"lib": ["ES2022"],
 		"types": ["node"],
 
@@ -12,7 +12,9 @@
 		"checkJs": false,
 		"verbatimModuleSyntax": false,
 
-		"exactOptionalPropertyTypes": false
+		"exactOptionalPropertyTypes": false,
+		"allowImportingTsExtensions": true,
+		"noEmit": true
 	},
 	"include": ["scripts"]
 }
