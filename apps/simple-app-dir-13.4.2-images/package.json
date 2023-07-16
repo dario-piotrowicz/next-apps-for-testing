@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages",
-    "vercel": "^30.2.2",
-    "wrangler": "^3.1.0"
+    "vercel": "^30.2.2"
   }
 }

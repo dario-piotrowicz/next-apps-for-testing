@@ -34,14 +34,31 @@ on:
         default: 'latest'
         type: string
 
-
 jobs:
-  log-the-inputs:
+  deploy-apps:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "App: $APP"
-          echo "next-on-pages version: $NEXT_ON_PAGES_VERSION"
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+      - name: Update json scripts
+        run: |
+          export NEXT_ON_PAGES_VERSION='${{ inputs.next-on-pages-version }}'
+          bash internal-packages/github-deploy-apps/update-jsons-script.sh
+      - name: Install NPM Dependencies
+        run: pnpm i
+      - name: Deploy apps
+        id: run-deploy-apps
+        working-directory: internal-packages/github-deploy-apps
+        run: GH_ACTION=true pnpm deploy-apps
         env:
           APP: ${{ inputs.app }}
-          NEXT_ON_PAGES_VERSION: ${{ inputs.next-on-pages-version }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PROJECT_NAME: ${{ vars.PROJECT_NAME }}
