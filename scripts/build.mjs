@@ -126,7 +126,7 @@ function runMainBuildLogic(app, deploy, projectName) {
     console.log('');
 
     if(failedBuilds.length) {
-      console.log(`\x1b[31m The following apps have been failed build:\x1b[0m`);
+      console.log(`\x1b[31mThe following apps have been failed build:\x1b[0m`);
       failedBuilds.forEach(app => {
         console.log(`\x1b[31m - ${app}\x1b[0m`);
       });
@@ -135,7 +135,7 @@ function runMainBuildLogic(app, deploy, projectName) {
     console.log('');
 
     if(failedDeployments.length) {
-      console.log(`\x1b[31m The following apps have been failed deployment:\x1b[0m`);
+      console.log(`\x1b[31mThe following apps have been failed deployment:\x1b[0m`);
       failedDeployments.forEach(app => {
         console.log(`\x1b[31m - ${app}\x1b[0m`);
       });
