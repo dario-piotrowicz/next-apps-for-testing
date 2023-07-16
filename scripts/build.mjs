@@ -45,7 +45,7 @@ if(!skipInteractivity){
 
 
 function runMainBuildLogic(app, deploy, projectName) {
-  const deployments = [];
+  const buildsDeployments = [];
   const failedBuilds = [];
   const failedDeployments = [];
 
@@ -59,11 +59,13 @@ function runMainBuildLogic(app, deploy, projectName) {
         if (deployStatus !== 0) {
           failedDeployments.push(app);
         } else {
-          deployments.push({
+          buildsDeployments.push({
             app,
             deploymentUrl
           });
         }
+      } else {
+        buildsDeployments.push({app});
       }
     }
   } else {
@@ -93,62 +95,20 @@ function runMainBuildLogic(app, deploy, projectName) {
         if (deployStatus !== 0) {
           failedDeployments.push(app);
         } else {
-          deployments.push({
+          buildsDeployments.push({
             app,
             deploymentUrl
           });
         }
+      } else {
+        buildsDeployments.push({app});
       }
 
       console.log('\n\n\n\n\n\n\n\n\n\n');
     });
   }
 
-  if(deploy) {
-    console.log('\n'.repeat(10));
-    const message = `===============================  Summary  ===============================`;
-    const decoration = new Array(message.length).fill('=').join('');
-    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
-    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
-    console.log(`\x1b[30m\x1b[46m ${message} \x1b[0m`);
-    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
-    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
-
-    console.log('\n');
-
-    if(deployments.length) {
-      console.log('The following apps have been successfully built and deployed:');
-      deployments.forEach(({app, deploymentUrl}) => {
-        console.log(` - ${app} deployed at ${deploymentUrl}`);
-      });
-    }
-
-    console.log('');
-
-    if(failedBuilds.length) {
-      console.log(`\x1b[31mThe following apps have been failed build:\x1b[0m`);
-      failedBuilds.forEach(app => {
-        console.log(`\x1b[31m - ${app}\x1b[0m`);
-      });
-    }
-
-    console.log('');
-
-    if(failedDeployments.length) {
-      console.log(`\x1b[31mThe following apps have been failed deployment:\x1b[0m`);
-      failedDeployments.forEach(app => {
-        console.log(`\x1b[31m - ${app}\x1b[0m`);
-      });
-    }
-
-    console.log('');
-
-    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
-    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
-    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
-    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
-    console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
-  }
+  printSummary(deploy, buildsDeployments, failedBuilds, failedDeployments);
 
   console.log('\n\n');
 }
@@ -183,4 +143,50 @@ function deployApp(app, projectName) {
     status: spawnResult.status,
     deploymentUrl,
   }
+}
+
+function printSummary (deploy, buildsDeployments, failedBuilds, failedDeployments) {
+  console.log('\n'.repeat(10));
+  const message = `===============================  Summary  ===============================`;
+  const decoration = new Array(message.length).fill('=').join('');
+  console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+  console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+  console.log(`\x1b[30m\x1b[46m ${message} \x1b[0m`);
+  console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+  console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+
+  console.log('\n');
+
+  if(buildsDeployments.length) {
+    console.log(`The following apps have been successfully built ${deploy ? 'and deployed' : ''}:`);
+    buildsDeployments.forEach(({app, deploymentUrl}) => {
+      console.log(` - ${app} ${deploy ? `deployed at ${deploymentUrl}` : ''}`);
+    });
+  }
+
+  console.log('');
+
+  if(failedBuilds.length) {
+    console.log(`\x1b[31mThe following apps have been failed build:\x1b[0m`);
+    failedBuilds.forEach(app => {
+      console.log(`\x1b[31m - ${app}\x1b[0m`);
+    });
+  }
+
+  console.log('');
+
+  if(failedDeployments.length) {
+    console.log(`\x1b[31mThe following apps have been failed deployment:\x1b[0m`);
+    failedDeployments.forEach(app => {
+      console.log(`\x1b[31m - ${app}\x1b[0m`);
+    });
+  }
+
+  console.log('');
+
+  console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+  console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+  console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+  console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
+  console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
 }
