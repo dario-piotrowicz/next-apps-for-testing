@@ -17,7 +17,7 @@ const buildOptions = buildOptionsStr && JSON.parse(buildOptionsStr);
 
 const skipInteractivity = !!buildOptions;
 
-const allApps = readdirSync('apps');
+const apps = readdirSync('apps');
 
 if(!skipInteractivity){
   inquirer
@@ -45,42 +45,28 @@ if(!skipInteractivity){
 
 
 function runMainBuildLogic(app, deploy, projectName) {
-  let deployments = [];
+  const deployments = [];
+  const failedBuilds = [];
+  const failedDeployments = [];
 
   if (app !== 'all') {
     const { status: buildStatus } = buildApp(app);
     if (buildStatus !== 0) {
-      console.error(`\x1b[31m Failed build! ${buildStatus} \x1b[0m`);
-      process.exit(buildStatus);
-    }
-    if (deploy) {
-      const { status: deployStatus, deploymentUrl } = deployApp(app, projectName);
-      if (deployStatus !== 0) {
-        console.error('\x1b[31m' +
-          '\n ⚠️⚠️⚠️⚠️ ERROR ⚠️⚠️⚠️⚠️' +
-          `\n app ${app} failed deployment!` +
-          '\x1b[0m');
-        process.exit(deployStatus);
-      } else {
-        deployments.push({
-          app,
-          deploymentUrl
-        });
+      failedBuilds.push(app);
+    } else {
+      if (deploy) {
+        const { status: deployStatus, deploymentUrl } = deployApp(app, projectName);
+        if (deployStatus !== 0) {
+          failedDeployments.push(app);
+        } else {
+          deployments.push({
+            app,
+            deploymentUrl
+          });
+        }
       }
     }
   } else {
-    // apps that don't currently build
-    const appsFailingBuild = [
-      // the build for dynamic-static-app-dir-13.2.4 is broken for some reason, I'll need to investigate and fix it
-      "dynamic-static-app-dir-13.2.4",
-      // simple-app-dir-13.4.1-server-actions used the `getRequestCfProperties` and
-      // `getRequestExecutionContext` from `@cloudflare/next-on-pages/utils` that is
-      // not merged and we'll probably won't go forward with it
-      "simple-app-dir-13.4.1-server-actions",
-    ];
-
-    const apps = allApps.filter(app => !appsFailingBuild.includes(app));
-
     const numOfApps = `${apps.length}`.padStart(2, '0');
 
     apps.forEach((app, idx) => {
@@ -96,34 +82,15 @@ function runMainBuildLogic(app, deploy, projectName) {
       const { status: buildStatus } = buildApp(app);
 
       if (buildStatus !== 0) {
-        console.error('\x1b[31m' +
-          `\n ${decoration}` +
-          `\n ${decoration}` +
-          `\n ${decoration}` +
-          '\n ⚠️⚠️⚠️⚠️ ERROR ⚠️⚠️⚠️⚠️' +
-          `\n app ${app} failed build, aborting!` +
-          `\n ${decoration}` +
-          `\n ${decoration}` +
-          `\n ${decoration}` +
-          '\x1b[0m');
-        process.exit(buildStatus);
+        failedBuilds.push(app);
+        return;
       }
 
       if (deploy) {
         const { status: deployStatus, deploymentUrl } = deployApp(app, projectName);
 
         if (deployStatus !== 0) {
-          console.error('\x1b[31m' +
-            `\n ${decoration}` +
-            `\n ${decoration}` +
-            `\n ${decoration}` +
-            '\n ⚠️⚠️⚠️⚠️ ERROR ⚠️⚠️⚠️⚠️' +
-            `\n app ${app} failed deployment, aborting!` +
-            `\n ${decoration}` +
-            `\n ${decoration}` +
-            `\n ${decoration}` +
-            '\x1b[0m');
-          process.exit(deployStatus);
+          failedDeployments.push(app);
         } else {
           deployments.push({
             app,
@@ -137,18 +104,44 @@ function runMainBuildLogic(app, deploy, projectName) {
   }
 
   if(deploy) {
-    const message = `================  ✨  Deployments  ✨  ================`;
+    const message = `================  Summary  ================`;
     const decoration = new Array(message.length + 2).fill('=').join('');
-    console.log(`\x1b[32m  ${decoration}  \x1b[0m`);
-    console.log(`\x1b[32m  ${message}  \x1b[0m`);
-    console.log(`\x1b[32m  ${decoration}  \x1b[0m`);
+    console.log(`\x1b[45m ${decoration} \x1b[0m`);
+    console.log(`\x1b[45m ${message} \x1b[0m`);
+    console.log(`\x1b[45m ${decoration} \x1b[0m`);
 
     console.log('');
 
-    console.log('The building process has succeeded and has also successfully produced the following deployments:\n');
-    deployments.forEach(({app, deploymentUrl}) => {
-      console.log(` - ${app} deployed at ${deploymentUrl}\n`);
-    });
+    if(deployments.length) {
+      console.log('The following apps have been successfully built and deployed:\n');
+      deployments.forEach(({app, deploymentUrl}) => {
+        console.log(` - ${app} deployed at ${deploymentUrl}`);
+      });
+    }
+
+    console.log('');
+
+    if(failedBuilds.length) {
+      console.log('The following apps have been failed build:\n');
+      failedBuilds.forEach(app => {
+        console.log(` - ${app}`);
+      });
+    }
+
+    console.log('');
+
+    if(failedDeployments.length) {
+      console.log('The following apps have been failed deployment:\n');
+      failedDeployments.forEach(app => {
+        console.log(` - ${app}`);
+      });
+    }
+
+    console.log('\n');
+
+    console.log(`\x1b[45m ${decoration} \x1b[0m`);
+    console.log(`\x1b[45m ${decoration} \x1b[0m`);
+    console.log(`\x1b[45m ${decoration} \x1b[0m`);
   }
 
   console.log('\n\n');
