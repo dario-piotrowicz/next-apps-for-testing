@@ -38,6 +38,10 @@ jobs:
   deploy-apps:
     runs-on: ubuntu-latest
     steps:
+      - name: Log provided inputs
+        run: |
+          echo "App to dispatch: ${{ inputs.app }}"
+          echo "next-on-pages version to use: ${{ inputs.next-on-pages-version }}"
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Setup Node.js 16.x
