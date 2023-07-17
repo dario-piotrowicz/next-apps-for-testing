@@ -1,5 +1,3 @@
-import { fromGithubAction } from "./utils/fromGithubAction.ts";
-import { setOutput } from '@actions/core';
 import { getAppToDeploy } from "./utils/getAppToDeploy.ts";
 import shallac from 'shellac';
 
