@@ -5,7 +5,7 @@ import { ImageResponse } from 'next/server';
 export const runtime = 'edge';
 
 // Make sure the font exists in the specified path:
-const font = fetch(new URL('../../assets/TYPEWR__.ttf', import.meta.url)).then(
+const font = fetch(new URL('../../assets/TYPEWR__.TTF', import.meta.url)).then(
   (res) => res.arrayBuffer(),
 );
 
