@@ -110,9 +110,8 @@ function runMainBuildLogic(app, deploy, projectName) {
 
   printSummary(deploy, buildsDeployments, failedBuilds, failedDeployments);
 
-  if(buildsDeployments.length === 0) {
-    // if there actually wasn't any successful build lets exit with
-    // a non 0 exit code
+  if(failedBuilds.length + failedDeployments.length > 0) {
+    // if there is at least a failure lets exit with a non 0 exit code
     process.exit(1);
   }
 
