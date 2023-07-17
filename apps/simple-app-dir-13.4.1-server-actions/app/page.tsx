@@ -2,18 +2,18 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from './page.module.css';
 import Link from 'next/link';
-import { getRequestCfProperties } from '@cloudflare/next-on-pages/utils';
+// import { getRequestCfProperties } from '@cloudflare/next-on-pages/utils';
 
 export const runtime = 'edge';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  const cf = getRequestCfProperties();
+  // const cf = getRequestCfProperties();
 
   return (
     <main className={styles.main}>
-      <div className={styles.center}>
+      {/* <div className={styles.center}>
         <h2>Cloudflare Request Info</h2>
         <ul>
           <li>
@@ -29,7 +29,7 @@ export default function Home() {
             timezone: {cf?.timezone ?? 'N/A'}
           </li>
         </ul>
-      </div>
+      </div> */}
 
       <div className={styles.grid}>
         <Link href="/action" className={styles.card}>
