@@ -161,16 +161,15 @@ function printSummary (deploy, buildsDeployments, failedBuilds, failedDeployment
   console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
   console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
 
-  console.log('\n');
+  console.log('');
 
   if(buildsDeployments.length) {
     console.log(`The following apps have been successfully built ${deploy ? 'and deployed' : ''}:`);
     buildsDeployments.forEach(({app, deploymentUrl}) => {
       console.log(` - ${app} ${deploy ? `deployed at ${deploymentUrl}` : ''}`);
     });
+    console.log('');
   }
-
-  console.log('');
 
   if(failedBuilds.length) {
     console.log(`\x1b[31mThe following apps have been failed build:\x1b[0m`);
