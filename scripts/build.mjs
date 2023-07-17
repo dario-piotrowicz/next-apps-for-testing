@@ -177,18 +177,17 @@ function printSummary (deploy, buildsDeployments, failedBuilds, failedDeployment
     failedBuilds.forEach(app => {
       console.log(`\x1b[31m - ${app}\x1b[0m`);
     });
+    console.log('');
   }
 
-  console.log('');
 
   if(failedDeployments.length) {
     console.log(`\x1b[31mThe following apps have been failed deployment:\x1b[0m`);
     failedDeployments.forEach(app => {
       console.log(`\x1b[31m - ${app}\x1b[0m`);
     });
+    console.log('');
   }
-
-  console.log('');
 
   console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
   console.log(`\x1b[30m\x1b[46m ${decoration} \x1b[0m`);
