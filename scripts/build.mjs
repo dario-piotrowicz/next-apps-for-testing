@@ -26,7 +26,7 @@ if(!skipInteractivity){
         type: 'list',
         name: 'app',
         message: 'Which app do you want to build?',
-        choices: ['all', new inquirer.Separator(), ...allApps],
+        choices: ['all', new inquirer.Separator(), ...apps],
       },
       {
         type: 'confirm',
