@@ -50,6 +50,8 @@ Additionally it uses the `eslint-plugin-next-on-pages` package
 
 It also has an api route (`/api/inline-assets`) that showcases how different inline asset fetches should behave
 
+It also has an api (`/api/gh-nop`) which returns stats of the next-on-pages repository using the github rest API
+
 ## simple-pages-dir-13.2.4
 
 Simple app using Next.js 13.2.4 using the pages directory (no src nor app), it also has a dynamic route
