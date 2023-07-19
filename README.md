@@ -12,8 +12,6 @@ It also contains a middleware so that if redirects requests to `/m` to `/routeA`
 
 Simple app using Next.js 13.0.0 using the app directory, it also contains nested and dynamic routes
 
-> Note: the app directory dynamic routes params don't work on 13.0.0 (accessing `/routeA/dRoute/name` generates an internal server error)
-
 ## simple-app-dir-13.2.4
 
 Simple app using Next.js 13.2.4 using the app directory
