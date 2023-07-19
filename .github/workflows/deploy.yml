@@ -46,8 +46,11 @@ jobs:
         run: |
           echo ""
           echo "App to dispatch: ${{ inputs.app }}"
+          echo ""
           echo "next-on-pages version to use: ${{ inputs.next-on-pages-version }}"
-          echo "Notes : ${{ inputs.notes }}"
+          echo ""
+          echo "Notes: ${{ inputs.notes }}"
+          echo ""
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Setup Node.js 16.x
