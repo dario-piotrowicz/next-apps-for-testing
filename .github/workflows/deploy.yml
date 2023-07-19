@@ -33,6 +33,10 @@ on:
         required: true
         default: 'latest'
         type: string
+      notes:
+        description: 'Optional notes (that you can check later to see what this run was for)'
+        default: ''
+        type: string
 
 jobs:
   deploy-apps:
@@ -40,8 +44,10 @@ jobs:
     steps:
       - name: Log provided inputs
         run: |
+          echo ""
           echo "App to dispatch: ${{ inputs.app }}"
           echo "next-on-pages version to use: ${{ inputs.next-on-pages-version }}"
+          echo "Notes : ${{ inputs.notes }}"
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Setup Node.js 16.x
