@@ -64,7 +64,7 @@ jobs:
           bash internal-packages/github-deploy-apps/update-jsons-script.sh
       - name: Install NPM Dependencies
         run: pnpm i
-      - name: Deploy apps
+      - name: Deploy ${{ inputs.app }} ${{ inputs.app == 'all' && 'apps' || 'app' }} using next-on-pages version ${{ inputs.next-on-pages-version }}
         id: run-deploy-apps
         working-directory: internal-packages/github-deploy-apps
         run: GH_ACTION=true pnpm deploy-apps
