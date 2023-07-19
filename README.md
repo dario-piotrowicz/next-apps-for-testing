@@ -50,6 +50,10 @@ It also has an api route (`/api/inline-assets`) that showcases how different inl
 
 It also has an api (`/api/gh-nop`) which returns stats of the next-on-pages repository using the github rest API
 
+## simple-app-dir-13.4.2
+
+Simple app using Next.js 13.4.2 showcasing how the built-in Image component's integration works
+
 ## simple-pages-dir-13.2.4
 
 Simple app using Next.js 13.2.4 using the pages directory (no src nor app), it also has a dynamic route
