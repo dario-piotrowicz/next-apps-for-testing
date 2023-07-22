@@ -28,7 +28,7 @@ const nextConfig = {
         // and dynamic routes are checked
         {
           source: '/:path*',
-          destination: `https://my-old-site.com/:path*`,
+          destination: `https://uuid.rocks/:path*`,
         },
       ],
     };
