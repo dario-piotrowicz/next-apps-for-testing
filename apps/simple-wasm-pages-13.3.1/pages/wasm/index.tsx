@@ -1,5 +1,5 @@
 // @ts-ignore
-import helloWasm from './hello.wasm?module'
+import helloWasm from './add-one.wasm?module'
 
 export const config = { runtime: 'experimental-edge' };
 

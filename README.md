@@ -106,13 +106,9 @@ Simple app using Next.js 13.2.4 using the app directory, it also contains static
 
 Simple application showing a single page (under the `pages` directory, no `src` nor `app`) which imports a wasm module (built from rust) with a function that adds one to a give number and shows the result on the screen.
 
-Notes:
+## simple-vercel-og-pages-13.3.1
 
-- it currently fails the build when running next-on-pages (v.0.10.0) since esbuild can't resolve the wasm import.
-- `next dev` generated the following runtime error if you specify the edge runtime (haven't tried deploying it):
-  ```
-  TypeError: addOne is not a function
-  ```
+Simple application showing a handful of examples (under the `pages` directory, no `src` nor `app`) which use @vercel/og to generate images
 
 ## config-rewrites-redirects-headers-13.2.4
 
