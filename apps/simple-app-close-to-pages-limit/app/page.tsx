@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -87,6 +92,12 @@ export default function Home() {
             Wasm <span>-&gt;</span>
           </h2>
           <p>a simple page using wasm</p>
+        </Link>
+        <Link href="/material-ui" className={styles.card}>
+          <h2>
+            Material UI<span>-&gt;</span>
+          </h2>
+          <p>a simple page implemented using Material UI</p>
         </Link>
       </div>
     </main>
