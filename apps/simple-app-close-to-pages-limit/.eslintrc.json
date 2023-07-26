@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "eslint-plugin-next-on-pages"
+  ],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:eslint-plugin-next-on-pages/recommended"
+  ]
+}

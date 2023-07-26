@@ -18,6 +18,7 @@ on:
         - i18n-pages-dir-13.4.1
         - kv-app-dir-13.4.4
         - middleware-13.2.4
+        - simple-app-close-to-pages-limit
         - simple-app-dir-13.0.0
         - simple-app-dir-13.2.4
         - simple-app-dir-13.3.1

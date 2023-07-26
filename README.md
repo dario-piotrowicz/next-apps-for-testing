@@ -171,3 +171,8 @@ Simple app dir application which uses a Cloudflare KV via server actions
 
 A simple pages dir application which has a dynamic path which uses getStaticPaths to generate
 an empty array of paths (reproduction of issue: https://github.com/cloudflare/next-on-pages/issues/274)
+
+## simple-app-close-to-pages-limit
+
+A simple app (in the sense that it doesn't contain any particular config, logic, etc...) that is complex
+enough to get close to the 10MB pages limit
