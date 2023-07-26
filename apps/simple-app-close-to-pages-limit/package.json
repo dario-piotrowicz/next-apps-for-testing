@@ -36,6 +36,7 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "lorem-ipsum": "^2.0.8",
+    "marked": "^5.1.2",
     "moment": "^2.29.4",
     "next": "13.4.6",
     "postcss": "8.4.24",
@@ -49,6 +50,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "../../../next-on-pages/packages/next-on-pages",
+    "@types/marked": "^5.0.1",
     "@types/qs": "^6.9.7",
     "eslint-plugin-next-on-pages": "../../../next-on-pages/packages/eslint-plugin-next-on-pages",
     "vercel": "^30.2.2"

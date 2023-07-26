@@ -456,6 +456,9 @@ importers:
       lorem-ipsum:
         specifier: ^2.0.8
         version: 2.0.8
+      marked:
+        specifier: ^5.1.2
+        version: 5.1.2
       moment:
         specifier: ^2.29.4
         version: 2.29.4
@@ -490,6 +493,9 @@ importers:
       '@cloudflare/next-on-pages':
         specifier: ../../../next-on-pages/packages/next-on-pages
         version: link:../../../next-on-pages/packages/next-on-pages
+      '@types/marked':
+        specifier: ^5.0.1
+        version: 5.0.1
       '@types/qs':
         specifier: ^6.9.7
         version: 6.9.7
@@ -6683,6 +6689,10 @@ packages:
 
   /@types/lodash@4.14.194:
     resolution: {integrity: sha512-r22s9tAS7imvBt2lyHC9B8AGwWnXaYb1tY09oyLkXDs4vArpYJzw09nj8MLx5VfciBPGIb+ZwG0ssYnEPJxn/g==}
+    dev: true
+
+  /@types/marked@5.0.1:
+    resolution: {integrity: sha512-Y3pAUzHKh605fN6fvASsz5FDSWbZcs/65Q6xYRmnIP9ZIYz27T4IOmXfH9gWJV1dpi7f1e7z7nBGUTx/a0ptpA==}
     dev: true
 
   /@types/mdast@3.0.11:
@@ -13839,6 +13849,12 @@ packages:
   /markdown-extensions@1.1.1:
     resolution: {integrity: sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==}
     engines: {node: '>=0.10.0'}
+
+  /marked@5.1.2:
+    resolution: {integrity: sha512-ahRPGXJpjMjwSOlBoTMZAK7ATXkli5qCPxZ21TG44rx1KEo44bii4ekgTDQPNRQ4Kh7JMb9Ub1PVk1NxRSsorg==}
+    engines: {node: '>= 16'}
+    hasBin: true
+    dev: false
 
   /mdast-util-definitions@5.1.2:
     resolution: {integrity: sha512-8SVPMuHqlPME/z3gqVwWY4zVXn8lqKv/pAhC57FuJ40ImXyBpmO5ukh98zB2v7Blql2FiHjHv9LVztSIqjY+MA==}
