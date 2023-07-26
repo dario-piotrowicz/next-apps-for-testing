@@ -111,6 +111,12 @@ export default function Home() {
           </h2>
           <p>Testing the marked npm package</p>
         </Link>
+        <Link href="/api/og" className={styles.card}>
+          <h2>
+            og <span>-&gt;</span>
+          </h2>
+          <p>Hello world printed with vercel/og</p>
+        </Link>
       </div>
     </main>
   );
