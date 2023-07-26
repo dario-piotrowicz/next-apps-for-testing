@@ -28,6 +28,7 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "lorem-ipsum": "^2.0.8",
+    "moment": "^2.29.4",
     "next": "13.4.6",
     "postcss": "8.4.24",
     "pretty-print-json": "^2.0.2",

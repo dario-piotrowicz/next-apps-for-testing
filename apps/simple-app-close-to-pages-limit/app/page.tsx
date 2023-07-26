@@ -6,11 +6,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
+        <div style={{display: 'none'}}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
@@ -29,7 +25,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center}>
+      <div className={styles.center} style={{ display: 'none' }}>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -79,6 +75,12 @@ export default function Home() {
             Zod <span>-&gt;</span>
           </h2>
           <p>testing zod</p>
+        </Link>
+        <Link href="/api/moment" className={styles.card}>
+          <h2>
+            moment <span>-&gt;</span>
+          </h2>
+          <p>testing moment</p>
         </Link>
       </div>
     </main>
