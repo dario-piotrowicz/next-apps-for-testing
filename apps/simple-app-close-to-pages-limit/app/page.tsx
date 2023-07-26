@@ -99,6 +99,12 @@ export default function Home() {
           </h2>
           <p>a simple page implemented using Material UI</p>
         </Link>
+        <Link href="/nextui" className={styles.card}>
+          <h2>
+            NextUI<span>-&gt;</span>
+          </h2>
+          <p>a simple page implemented using NextUI</p>
+        </Link>
       </div>
     </main>
   );

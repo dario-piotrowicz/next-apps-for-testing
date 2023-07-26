@@ -27,6 +27,7 @@
     "@mui/material": "^5.14.2",
     "@mui/x-data-grid": "^6.10.1",
     "@next/mdx": "^13.2.4",
+    "@nextui-org/react": "1.0.0-beta.13",
     "@types/mdx": "^2.0.5",
     "@types/node": "20.3.1",
     "@types/react": "18.2.13",
