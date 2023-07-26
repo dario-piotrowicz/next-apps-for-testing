@@ -38,6 +38,8 @@ import PrintIcon from "@mui/icons-material/Print";
 import ShareIcon from "@mui/icons-material/Share";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 
+export const runtime = 'edge';
+
 export default function MaterialUiPage() {
   const speedDialActions = [
     { icon: <FileCopyIcon />, name: "Copy" },

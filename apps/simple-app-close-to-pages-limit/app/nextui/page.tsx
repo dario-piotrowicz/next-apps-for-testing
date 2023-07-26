@@ -15,6 +15,8 @@ import {
   Text,
 } from "@nextui-org/react";
 
+export const runtime = 'edge';
+
 export default function NextUiPage() {
   return (
     <div className={styles.container}>
