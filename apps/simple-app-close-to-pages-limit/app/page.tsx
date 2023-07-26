@@ -82,6 +82,12 @@ export default function Home() {
           </h2>
           <p>testing moment</p>
         </Link>
+        <Link href="/wasms/wasm" className={styles.card}>
+          <h2>
+            Wasm <span>-&gt;</span>
+          </h2>
+          <p>a simple page using wasm</p>
+        </Link>
       </div>
     </main>
   );
