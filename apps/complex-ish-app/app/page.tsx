@@ -2,16 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <div style={{display: 'none'}}>
+        <div style={{ display: "none" }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
@@ -30,7 +25,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center} style={{ display: 'none' }}>
+      <div className={styles.center} style={{ display: "none" }}>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -45,85 +40,77 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <Link href="/routeA" className={styles.card}>
-          <h2>
-            Route A <span>-&gt;</span>
-          </h2>
-          <p>Test nested and dynamic routes.</p>
-        </Link>
-        <Link href="/api/qs" className={styles.card}>
-          <h2>
-            QS <span>-&gt;</span>
-          </h2>
-          <p>Testing the qs npm package</p>
-        </Link>
-        <Link href="/api/pretty-print-json" className={styles.card}>
-          <h2>
-            Pretty-Print-Json <span>-&gt;</span>
-          </h2>
-          <p>Testing the pretty-print-json npm package</p>
-        </Link>
-        <Link href="/api/lorem-ipsum" className={styles.card}>
-          <h2>
-            Lorem-Ipsum <span>-&gt;</span>
-          </h2>
-          <p>Lorem ipsum dynamic text</p>
-        </Link>
-        <Link href="/api/lorem-ipsum?static=0" className={styles.card}>
-          <h2>
-            Lorem-Ipsum <span>-&gt;</span>
-          </h2>
-          <p>Lorem ipsum static text</p>
-        </Link>
-        <Link href="/api/zod" className={styles.card}>
-          <h2>
-            Zod <span>-&gt;</span>
-          </h2>
-          <p>testing zod</p>
-        </Link>
-        <Link href="/api/moment" className={styles.card}>
-          <h2>
-            moment <span>-&gt;</span>
-          </h2>
-          <p>testing moment</p>
-        </Link>
-        <Link href="/wasms/wasm" className={styles.card}>
-          <h2>
-            Wasm <span>-&gt;</span>
-          </h2>
-          <p>a simple page using wasm</p>
-        </Link>
-        <Link href="/material-ui" className={styles.card}>
-          <h2>
-            Material UI<span>-&gt;</span>
-          </h2>
-          <p>a simple page implemented using Material UI</p>
-        </Link>
-        <Link href="/nextui" className={styles.card}>
-          <h2>
-            NextUI<span>-&gt;</span>
-          </h2>
-          <p>a simple page implemented using NextUI</p>
-        </Link>
-        <Link href="/antd" className={styles.card}>
-          <h2>
-            Ant Design<span>-&gt;</span>
-          </h2>
-          <p>a simple page implemented using Ant Design</p>
-        </Link>
-        <Link href="/api/marked" className={styles.card}>
-          <h2>
-            marked <span>-&gt;</span>
-          </h2>
-          <p>Testing the marked npm package</p>
-        </Link>
-        <Link href="/api/og" className={styles.card}>
-          <h2>
-            og <span>-&gt;</span>
-          </h2>
-          <p>Hello world printed with vercel/og</p>
-        </Link>
+        {links.map(({ href, title, description }) => (
+          <Link key={href} href={href} className={styles.card}>
+            <h2>
+              {title}
+              <span>-&gt;</span>
+            </h2>
+            <p>{description}</p>
+          </Link>
+        ))}
       </div>
     </main>
   );
 }
+
+const links: { href: string; title: string; description: string }[] = [
+  {
+    href: "/routeA",
+    title: "Route A",
+    description: "Test nested and dynamic routes.",
+  },
+  { href: "/api/qs", title: "QS", description: "Testing the qs npm package" },
+  {
+    href: "/api/pretty-print-json",
+    title: "Pretty-Print-Json",
+    description: "Testing the pretty-print-json npm package",
+  },
+  {
+    href: "/api/lorem-ipsum",
+    title: "Lorem-Ipsum",
+    description: "Lorem ipsum dynamic text",
+  },
+  {
+    href: "/api/lorem-ipsum?static=0",
+    title: "Lorem-Ipsum",
+    description: "Lorem ipsum static text",
+  },
+  { href: "/api/zod", title: "Zod", description: "testing zod" },
+  { href: "/api/moment", title: "moment", description: "testing moment" },
+  {
+    href: "/wasms/wasm",
+    title: "Wasm",
+    description: "a simple page using wasm",
+  },
+  {
+    href: "/material-ui",
+    title: "Material U",
+    description: "a simple page implemented using Material UI",
+  },
+  {
+    href: "/nextui",
+    title: "NextU",
+    description: "a simple page implemented using NextUI",
+  },
+  {
+    href: "/antd",
+    title: "Ant Desig",
+    description: "a simple page implemented using Ant Design",
+  },
+  {
+    href: "/react-bootstrap",
+    title: "React Bootstrap",
+    description: "a simple page implemented using React Bootstrap",
+  },
+  {
+    href: "/api/marked",
+    title: "marked",
+    description: "Testing the marked npm package",
+  },
+  {
+    href: "/api/og",
+    title: "og",
+    description: "Hello world printed with vercel/og",
+  },
+];
