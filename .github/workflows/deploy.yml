@@ -10,6 +10,7 @@ on:
         options:
         - all
         - app-playground-edge
+        - complex-ish-app
         - config-rewrites-redirects-headers-13.2.4
         - dynamic-static-app-dir-13.2.4
         - empty-getstaticpaths-pages-13.4.4

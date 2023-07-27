@@ -17,7 +17,7 @@ const buildOptions = buildOptionsStr && JSON.parse(buildOptionsStr);
 
 const skipInteractivity = !!buildOptions;
 
-const apps = readdirSync('apps');
+const allApps = readdirSync('apps');
 
 if(!skipInteractivity){
   inquirer
@@ -26,7 +26,7 @@ if(!skipInteractivity){
         type: 'list',
         name: 'app',
         message: 'Which app do you want to build?',
-        choices: ['all', new inquirer.Separator(), ...apps],
+        choices: ['all', new inquirer.Separator(), ...allApps],
       },
       {
         type: 'confirm',
@@ -69,6 +69,13 @@ function runMainBuildLogic(app, deploy, projectName) {
       }
     }
   } else {
+    const appsToExclude = [
+      // the complex-ish-app takes ages to build and it can't run on a non paid workers
+      // plan so let's skip it when running all the apps
+      'complex-ish-app'
+    ];
+    const apps = allApps.filter(app => !appsToExclude.includes(app));
+
     const numOfApps = `${apps.length}`.padStart(2, '0');
 
     apps.forEach((app, idx) => {
@@ -119,9 +126,10 @@ function runMainBuildLogic(app, deploy, projectName) {
 }
 
 function buildApp(app) {
-  const buildArgs = ['--'].concat(process.argv.slice(3));
+  const nopArgs = process.argv.slice(3);
+  const buildArgs = nopArgs.length > 0 ? ['--', '--'].concat(process.argv.slice(3)) : [];
 
-  return spawnSync("npm", ["run", script, '--', ...buildArgs], {
+  return spawnSync("npm", ["run", script, ...buildArgs], {
     cwd: join('apps', app),
     stdio: "inherit",
   });
