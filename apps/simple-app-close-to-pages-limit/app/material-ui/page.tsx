@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import * as React from "react";
@@ -38,6 +39,10 @@ import PrintIcon from "@mui/icons-material/Print";
 import ShareIcon from "@mui/icons-material/Share";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 
+import * as MaterialUI from '@mui/material';
+import * as MaterialUIIcons from '@mui/icons-material';
+import * as MaterialUILab from '@mui/lab';
+
 export const runtime = 'edge';
 
 export default function MaterialUiPage() {
@@ -47,6 +52,10 @@ export default function MaterialUiPage() {
     { icon: <PrintIcon />, name: "Print" },
     { icon: <ShareIcon />, name: "Share" },
   ];
+
+  console.log(typeof MaterialUI);
+  console.log(typeof MaterialUIIcons);
+  console.log(typeof MaterialUILab);
 
   return (
     <div className={styles.container}>

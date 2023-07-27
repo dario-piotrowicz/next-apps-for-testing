@@ -15,9 +15,13 @@ import {
   Text,
 } from "@nextui-org/react";
 
+import * as NextUI from '@nextui-org/react';
+
 export const runtime = 'edge';
 
 export default function NextUiPage() {
+  console.log(typeof NextUI);
+
   return (
     <div className={styles.container}>
       <div className={styles.item}>

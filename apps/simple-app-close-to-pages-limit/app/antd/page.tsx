@@ -4,9 +4,14 @@ import * as React from "react";
 import styles from "./page.module.css";
 import { Breadcrumb, Button, ColorPicker, DatePicker, Table } from "antd";
 
+import * as AntDesign from "antd";
+
 export const runtime = "edge";
 
 export default function AntDesignPage() {
+
+  console.log(typeof AntDesign);
+
   return (
     <div className={styles.container}>
       <div className={styles.item}>
