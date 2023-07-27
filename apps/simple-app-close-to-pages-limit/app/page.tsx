@@ -105,6 +105,12 @@ export default function Home() {
           </h2>
           <p>a simple page implemented using NextUI</p>
         </Link>
+        <Link href="/antd" className={styles.card}>
+          <h2>
+            Ant Design<span>-&gt;</span>
+          </h2>
+          <p>a simple page implemented using Ant Design</p>
+        </Link>
         <Link href="/api/marked" className={styles.card}>
           <h2>
             marked <span>-&gt;</span>
