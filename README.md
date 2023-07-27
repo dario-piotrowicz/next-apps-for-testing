@@ -171,3 +171,9 @@ Simple app dir application which uses a Cloudflare KV via server actions
 
 A simple pages dir application which has a dynamic path which uses getStaticPaths to generate
 an empty array of paths (reproduction of issue: https://github.com/cloudflare/next-on-pages/issues/274)
+
+## complex-ish-app
+
+An application full of dependencies and that produces a large bundle (so it's only deployable on a paid account).
+
+It doesn't contain any real complex/advanced logic.

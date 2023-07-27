@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem;
+    gap: 3rem;
+}
+
+.item {
+    padding: 2rem;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.874);
+    color: black;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    gap: 1rem;
+}
