@@ -99,6 +99,11 @@ const links: { href: string; title: string; description: string }[] = [
     description: "a simple page implemented using Ant Design",
   },
   {
+    href: "/chakra-ui",
+    title: "Chakra UI",
+    description: "a simple page implemented using Chakra UI",
+  },
+  {
     href: "/react-bootstrap",
     title: "React Bootstrap",
     description: "a simple page implemented using React Bootstrap",
