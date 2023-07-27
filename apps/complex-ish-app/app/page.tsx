@@ -104,6 +104,11 @@ const links: { href: string; title: string; description: string }[] = [
     description: "a simple page implemented using React Bootstrap",
   },
   {
+    href: "/font-awesome-icons",
+    title: "FA Icons",
+    description: "a simple page showing some Font Awesome Icons",
+  },
+  {
     href: "/api/marked",
     title: "marked",
     description: "Testing the marked npm package",
