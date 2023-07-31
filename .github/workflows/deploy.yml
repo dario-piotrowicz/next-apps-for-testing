@@ -68,7 +68,7 @@ jobs:
           export NEXT_ON_PAGES_VERSION='${{ inputs.next-on-pages-version }}'
           bash internal-packages/github-deploy-apps/update-jsons-script.sh
       - name: Install NPM Dependencies
-        run: pnpm i
+        run: pnpm i --no-frozen-lockfile
       - name: Deploy ${{ inputs.app }} ${{ inputs.app == 'all' && 'apps' || 'app' }} using next-on-pages version ${{ inputs.next-on-pages-version }}
         id: run-deploy-apps
         working-directory: internal-packages/github-deploy-apps
