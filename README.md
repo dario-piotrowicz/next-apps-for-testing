@@ -2,6 +2,11 @@
 
 very simple nextjs apps used to manually test next-on-pages, until we find a better solution
 
+## app-dir-not-founds
+
+Simple app directory app containing various not-found pages, one (static) at the root (`app/`) and
+the rest (dynamic) within sub-routes (triggered via [notFound](https://nextjs.org/docs/app/api-reference/functions/not-found))
+
 ## simple-src-13.2.4
 
 Simple app using Next.js 13.2.4 using the src directory, it also contains nested and dynamic routes
