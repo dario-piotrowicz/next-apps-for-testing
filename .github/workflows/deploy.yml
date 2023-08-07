@@ -9,6 +9,7 @@ on:
         type: choice
         options:
         - all
+        - app-dir-not-founds
         - app-playground-edge
         - complex-ish-app
         - config-rewrites-redirects-headers-13.2.4
