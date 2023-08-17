@@ -15,6 +15,7 @@ on:
         - config-rewrites-redirects-headers-13.2.4
         - dynamic-static-app-dir-13.2.4
         - empty-getstaticpaths-pages-13.4.4
+        - geolocation
         - i18n-next-intl-13.4.1
         - i18n-next-translate-13.4.1
         - i18n-pages-dir-13.4.1
