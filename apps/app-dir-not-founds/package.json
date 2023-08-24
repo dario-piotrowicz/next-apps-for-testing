@@ -30,6 +30,6 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.5.0",
     "eslint-plugin-next-on-pages": "^1.5.0",
-    "vercel": "^31.0.0"
+    "vercel": "^32.0.0"
   }
 }
