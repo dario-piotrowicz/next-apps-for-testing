@@ -53,7 +53,7 @@ jobs:
       - name: Deploy apps
         id: run-deploy-apps
         working-directory: internal-packages/github-deploy-apps
-        run: GH_ACTION=true npm run deploy-apps
+        run: GH_ACTION=true pnpm run deploy-apps
         env:
           APP: ${{ inputs.app }}
           NEXT_ON_PAGES_VERSION: ${{ inputs.next-on-pages-version }}
