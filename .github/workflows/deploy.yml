@@ -35,8 +35,9 @@ on:
         type: string
 
 jobs:
-  deploy-apps:
+  deploy-all-apps:
     runs-on: ubuntu-latest
+    if: inputs.app == 'all'
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
