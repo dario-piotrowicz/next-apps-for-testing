@@ -2,58 +2,42 @@ name: Deploy applications
 on:
   workflow_dispatch:
     inputs:
-      app:
-        description: 'App to dispatch'
-        required: true
-        default: 'all'
-        type: choice
-        options:
-        - all
-        - app-dir-not-founds
-        - app-playground-edge
-        - complex-ish-app
-        - config-rewrites-redirects-headers-13.2.4
-        - dynamic-static-app-dir-13.2.4
-        - empty-getstaticpaths-pages-13.4.4
-        - i18n-next-intl-13.4.1
-        - i18n-next-translate-13.4.1
-        - i18n-pages-dir-13.4.1
-        - kv-app-dir-13.4.4
-        - middleware-13.2.4
-        - simple-app-close-to-pages-limit
-        - simple-app-dir-13.0.0
-        - simple-app-dir-13.2.4
-        - simple-app-dir-13.3.1
-        - simple-app-dir-13.4.1-server-actions
-        - simple-app-dir-13.4.2
-        - simple-app-dir-13.4.2-images
-        - simple-pages-dir-13.2.4
-        - simple-pages-dir-13.4.2
-        - simple-src-13.2.4
-        - simple-wasm-pages-13.3.1
       next-on-pages-version:
         description: 'Version of @cloudflare/next-on-pages to use'
         required: true
         default: 'latest'
         type: string
-      notes:
-        description: 'Optional notes (that you can check later to see what this run was for)'
-        default: ''
-        type: string
 
 jobs:
-  deploy-apps:
+  deploy:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [
+          'app-dir-not-found',
+          'app-playground-edge',
+          'complex-ish-app',
+          'config-rewrites-redirects-headers-13.2.4',
+          'dynamic-static-app-dir-13.2.4',
+          'empty-getstaticpaths-pages-13.4.4',
+          'i18n-next-intl-13.4.1',
+          'i18n-next-translate-13.4.1',
+          'i18n-pages-dir-13.4.1',
+          'kv-app-dir-13.4.4',
+          'middleware-13.2.4',
+          'simple-app-dir-13.0.0',
+          'simple-app-dir-13.2.4',
+          'simple-app-dir-13.3.1',
+          'simple-app-dir-13.4.1-server-actions',
+          'simple-app-dir-13.4.2',
+          'simple-app-dir-13.4.2-images',
+          'simple-pages-dir-13.2.4',
+          'simple-pages-dir-13.4.2',
+          'simple-src-13.2.4',
+          'simple-wasm-pages-13.3.1',
+        ]
     steps:
-      - name: Log provided inputs
-        run: |
-          echo ""
-          echo "App to dispatch: ${{ inputs.app }}"
-          echo ""
-          echo "next-on-pages version to use: ${{ inputs.next-on-pages-version }}"
-          echo ""
-          echo "Notes: ${{ inputs.notes }}"
-          echo ""
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Setup Node.js 16.x
@@ -70,11 +54,11 @@ jobs:
           bash internal-packages/github-deploy-apps/update-jsons-script.sh
       - name: Install NPM Dependencies
         run: pnpm i --no-frozen-lockfile
-      - name: Deploy ${{ inputs.app }} ${{ inputs.app == 'all' && 'apps' || 'app' }} using next-on-pages version ${{ inputs.next-on-pages-version }}
+      - name: Deploy ${{ matrix.app }} using next-on-pages version ${{ inputs.next-on-pages-version }}
         id: run-deploy-apps
         working-directory: internal-packages/github-deploy-apps
         run: GH_ACTION=true pnpm deploy-apps
         env:
-          APP: ${{ inputs.app }}
+          APP: ${{ matrix.app }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           PROJECT_NAME: ${{ vars.PROJECT_NAME }}
