@@ -17,7 +17,7 @@ jobs:
         app: [
           'app-dir-not-found',
           'app-playground-edge',
-          'complex-ish-app',
+          # 'complex-ish-app',
           'config-rewrites-redirects-headers-13.2.4',
           'dynamic-static-app-dir-13.2.4',
           'empty-getstaticpaths-pages-13.4.4',
