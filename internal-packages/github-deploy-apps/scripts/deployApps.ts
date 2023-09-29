@@ -17,6 +17,6 @@ async function runBuildAndDeployScript(app: string): Promise<void> {
 
 		$ export NOP_MONOREPO_BUILD_OPTIONS='{ "app": "${app}", "deploy": true, "projectName": "${process.env['PROJECT_NAME']}" }'
 
-		$$ cd ../.. && npm run nop
+		$$ cd ../.. && pnpm run nop
 	`;
 }
