@@ -23,8 +23,10 @@ export default function PageLayout({children, title}: Props) {
         }}
       >
         <div style={{maxWidth: 510}}>
-          <h1>{title}</h1>
-          {children}
+          <>
+            <h1>{title}</h1>
+            {children}
+          </>
         </div>
       </div>
     </>
