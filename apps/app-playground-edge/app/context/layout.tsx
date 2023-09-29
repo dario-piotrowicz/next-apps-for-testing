@@ -2,7 +2,7 @@ import { fetchCategories } from '../../lib/get-categories';
 import { Boundary } from '../../ui/boundary';
 import { TabGroup } from '../../ui/tab-group';
 import { CounterProvider } from 'app/context/counter-context';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import ContextClickCounter from './context-click-counter';
 
 export const metadata = {
@@ -12,7 +12,7 @@ export const metadata = {
 export default async function Layout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode
 }) {
   const categories = await fetchCategories();
   return (
