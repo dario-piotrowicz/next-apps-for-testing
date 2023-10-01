@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         app: [
-          'app-dir-not-found',
+          'app-dir-not-founds',
           'app-playground-edge',
           # 'complex-ish-app',
           'config-rewrites-redirects-headers-13.2.4',
