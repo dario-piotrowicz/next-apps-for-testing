@@ -59,6 +59,10 @@ It also has an api (`/api/gh-nop`) which returns stats of the next-on-pages repo
 
 Simple app using Next.js 13.4.2 showcasing how the built-in Image component's integration works
 
+## simple-app-dir-13.5.6
+
+Simple app using Next.js 13.5.6 is also includes a catch-all dynamic route which displays the provided slugs
+
 ## simple-pages-dir-13.2.4
 
 Simple app using Next.js 13.2.4 using the pages directory (no src nor app), it also has a dynamic route
