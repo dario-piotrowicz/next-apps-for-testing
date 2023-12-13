@@ -32,6 +32,7 @@ jobs:
           'simple-app-dir-13.4.1-server-actions',
           'simple-app-dir-13.4.2',
           'simple-app-dir-13.4.2-images',
+          'simple-vercel-og-pages-13.3.1',
           'simple-app-dir-13.5.6',
           'simple-pages-dir-13.2.4',
           'simple-pages-dir-13.4.2',
